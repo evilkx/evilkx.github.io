@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://vilogy.citvilab.cn/"/>
-  <updated>2020-04-17T03:17:39.332Z</updated>
+  <updated>2020-04-17T03:47:10.948Z</updated>
   <id>http://vilogy.citvilab.cn/</id>
   
   <author>
@@ -17,11 +17,101 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>排序</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/Algorithm/%E6%8E%92%E5%BA%8F/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/Algorithm/排序/</id>
+    <published>2020-04-17T03:09:34.000Z</published>
+    <updated>2020-04-17T03:47:10.948Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://vilogy.citvilab.cn/categories/Algorithm/"/>
+    
+    
+      <category term="排序" scheme="http://vilogy.citvilab.cn/tags/%E6%8E%92%E5%BA%8F/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据结构</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/Algorithm/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/Algorithm/数据结构/</id>
+    <published>2020-04-17T03:08:44.000Z</published>
+    <updated>2020-04-17T03:46:54.421Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://vilogy.citvilab.cn/categories/Algorithm/"/>
+    
+    
+      <category term="数据结构" scheme="http://vilogy.citvilab.cn/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>搜索</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/Algorithm/%E6%90%9C%E7%B4%A2/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/Algorithm/搜索/</id>
+    <published>2020-04-17T03:08:35.000Z</published>
+    <updated>2020-04-17T03:46:41.573Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://vilogy.citvilab.cn/categories/Algorithm/"/>
+    
+    
+      <category term="搜索" scheme="http://vilogy.citvilab.cn/tags/%E6%90%9C%E7%B4%A2/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>贪婪算法</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/Algorithm/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/Algorithm/贪婪算法/</id>
+    <published>2020-04-17T03:07:33.000Z</published>
+    <updated>2020-04-17T03:45:58.543Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://vilogy.citvilab.cn/categories/Algorithm/"/>
+    
+    
+      <category term="贪婪算法" scheme="http://vilogy.citvilab.cn/tags/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>动态规划</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/Algorithm/动态规划/</id>
+    <published>2020-04-17T03:06:44.000Z</published>
+    <updated>2020-04-17T03:47:17.416Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://vilogy.citvilab.cn/categories/Algorithm/"/>
+    
+    
+      <category term="动态规划" scheme="http://vilogy.citvilab.cn/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
     <title>STM32学习日记-03</title>
     <link href="http://vilogy.citvilab.cn/2020/04/17/STM32/STM32%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-03/"/>
     <id>http://vilogy.citvilab.cn/2020/04/17/STM32/STM32学习日记-03/</id>
     <published>2020-04-17T03:06:44.000Z</published>
-    <updated>2020-04-17T03:17:39.332Z</updated>
+    <updated>2020-04-17T03:26:10.374Z</updated>
     
     <summary type="html">
     
@@ -30,41 +120,7 @@
       <category term="STM32" scheme="http://vilogy.citvilab.cn/categories/STM32/"/>
     
     
-      <category term="STM32, Linux" scheme="http://vilogy.citvilab.cn/tags/STM32-Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>STM32学习日记-02</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/STM32/STM32%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-02/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/STM32/STM32学习日记-02/</id>
-    <published>2020-04-17T03:04:01.000Z</published>
-    <updated>2020-04-17T03:10:04.063Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="STM32 Linux" scheme="http://vilogy.citvilab.cn/categories/STM32-Linux/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>STM32学习日记-02</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/STM32%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-02/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/STM32学习日记-02/</id>
-    <published>2020-04-17T03:04:01.000Z</published>
-    <updated>2020-04-17T03:18:18.404Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="STM32" scheme="http://vilogy.citvilab.cn/categories/STM32/"/>
-    
-    
-      <category term="STM32 Linux" scheme="http://vilogy.citvilab.cn/tags/STM32-Linux/"/>
+      <category term="STM32" scheme="http://vilogy.citvilab.cn/tags/STM32/"/>
     
   </entry>
   
