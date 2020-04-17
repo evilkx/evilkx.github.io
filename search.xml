@@ -13,10 +13,16 @@
       
       <categories>
           
-          <category> STM32, Linux </category>
+          <category> STM32 </category>
           
       </categories>
       
+      
+        <tags>
+            
+            <tag> STM32, Linux </tag>
+            
+        </tags>
       
     </entry>
     
@@ -36,6 +42,31 @@
           
       </categories>
       
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>STM32学习日记-02</title>
+      <link href="/2020/04/17/STM32%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-02/"/>
+      <url>/2020/04/17/STM32%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-02/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> STM32 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> STM32 Linux </tag>
+            
+        </tags>
       
     </entry>
     
