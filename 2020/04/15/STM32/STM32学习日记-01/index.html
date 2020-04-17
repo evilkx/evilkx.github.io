@@ -3,7 +3,7 @@
 <head><meta name="generator" content="Hexo 3.9.0">
   <meta charset="utf-8">
   
-  <title>STM32学习日记-03 | VILOGY</title>
+  <title>STM32学习日记-01 | VILOGY</title>
   <meta name="author" content="vilogy">
   
   <meta name="description" content="知之甚少，所行甚远🌍">
@@ -11,7 +11,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-  <meta property="og:title" content="STM32学习日记-03">
+  <meta property="og:title" content="STM32学习日记-01">
   <meta property="og:site_name" content="VILOGY">
 
   
@@ -45,7 +45,7 @@
   <div class="container" id="container">
 	<div class="content">
 	  <div class="page-header">		
-  <h1><a class="brand" href="/">VILOGY</a><span class="split"></span><span class="title">STM32学习日记-03</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2020-04-17</span></h1>
+  <h1><a class="brand" href="/">VILOGY</a><span class="split"></span><span class="title">STM32学习日记-01</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2020-04-15</span></h1>
 </div>		
 
 <div class="row page">
@@ -58,7 +58,21 @@
 	  
 
 	  <!-- content -->
-	  	  
+	  <h1 id="STM32学习日记-01"><a href="#STM32学习日记-01" class="headerlink" title="STM32学习日记 - 01"></a>STM32学习日记 - 01</h1><p>由于项目中需要一个高性能、低功耗的执行机构开发板，于是选择了搭载STM32F407为主控的核心板来做实验。其实之前多少接触过一些STM32，但是一直没有系统的学习，感觉就是“高级单片机”，正好趁这个机会，系统的学习一下。</p>
+<p>最近陆续的拿到了几块板子，树莓派Zero W，STM32F407，Xilinx ZYNQ，还有一些外设。有的已经烧上系统跑了起来，有的还没有点亮过，每天把玩着这些板子真是有满足感。</p>
+<p>这是一个开篇嘛，就聊聊感受好啦。今天也一直在忙别的（算法真好玩），晚上才有时间来鼓捣鼓捣板子。前几天学AltiumDesign，练手画了一块STM32F03C8T6的核心板，双层PCB，还挺有意思的，让我回想起之前被PCB布线支配的恐惧。</p>
+<p><img src="https://img2020.cnblogs.com/blog/1126664/202004/1126664-20200415224627164-480264179.png" alt="stm32f103-core" style="zoom: 33%;"></p>
+<p>但是双层PCB相对来说浪费了板子背面的控件，想把所有模块设计的比较小的时候，就需要2层往上的PCB设计，及高速PCB设计等相关知识。任重道远。</p>
+<p>说起来，其实最近很长一段时间，我都处在一种<strong>极度焦虑</strong>的状态，每天都在接触自己的知识边界，反复锤炼自己，牙疼，晚上辗转反侧睡不着觉。做梦都是在做开发板，在推算法。我对感兴趣的知识是比较贪婪的，凡是我了解到的都想要学会。这段时间常常自喻，如果知识是一片海，那我就快要溺死了。</p>
+<h3 id="今天做了些什么"><a href="#今天做了些什么" class="headerlink" title="今天做了些什么"></a>今天做了些什么</h3><ul>
+<li>早起突然有个想法，想反编译mindviewer，回来查了一些资料，可行。但是不想污染PC的蓝牙串口而作罢。我希望实现底层的板子直接拿TGAM的数据流做处理控制，不需要单独分出个板子来做高级处理。所以目前的目标就是把STM32的蓝牙模块搞通。</li>
+<li>学了几种排序算法：插入排序、归并排序、快速排序。</li>
+<li>学习了几种搜索算法：广度优先、深度优先、A*。</li>
+<li>其实这些基础的排序搜索算法都是堆栈和队列的应用，但是我比较笨，接受慢，明天再来写算法部分的总结文章。</li>
+<li>学习了opencv图像处理的一些基础知识和API。锐化，浮雕，合并，反色…感觉能做个PS Lite,hhh.</li>
+<li>调试了STM32核心板，基本流程跑了一遍，舒服。</li>
+</ul>
+	  
 
 	  <div>
   		<center>
@@ -79,6 +93,38 @@
 		
 	
 		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			
+		
+	
+		
 			
 			
 		
@@ -115,11 +161,9 @@
 	
 		
 	
-		
 	
 	
-	
-		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+		<li class="prev"><a href="/2020/04/17/STM32/STM32学习日记-02/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
 	
 	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
 	
