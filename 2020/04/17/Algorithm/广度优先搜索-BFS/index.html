@@ -1,0 +1,244 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  
+  <title>广度优先搜索(BFS) | VILOGY</title>
+  <meta name="author" content="vilogy">
+  
+  <meta name="description" content="知之甚少，所行甚远🌍">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="广度优先搜索(BFS)">
+  <meta property="og:site_name" content="VILOGY">
+
+  
+    <meta property="og:image" content>
+  
+
+  
+    <link rel="alternative" href="/atom.xml" title="VILOGY" type="application/atom+xml">
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+  
+  <link rel="stylesheet" href="/css/bootstrap.min.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">  
+  <link rel="stylesheet" href="/css/sidenav.css" media="screen" type="text/css">  
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+</head>
+</html>
+<body id="body" data-spy="scroll" data-target=".toc">
+  <div class="container" id="container">
+	<div class="content">
+	  <div class="page-header">		
+  <h1><a class="brand" href="/">VILOGY</a><span class="split"></span><span class="title">广度优先搜索(BFS)</span><span class="date" id="title-date"><i class="fa fa-clock-o"></i> 2020-04-17</span></h1>
+</div>		
+
+<div class="row page">
+  <!-- cols -->	
+  
+  
+
+  
+	<div class="col-md-12">
+	  
+
+	  <!-- content -->
+	  <h2 id="广度优先搜索（Bread-First-Search）"><a href="#广度优先搜索（Bread-First-Search）" class="headerlink" title="广度优先搜索（Bread First Search）"></a>广度优先搜索（Bread First Search）</h2><h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>广度优先搜索算法也是图论中的一种经典算法，常应用于寻找一幅图中两顶点之间的<strong>最短</strong>路径，而非遍历整个图或树，这是DFS所没有的。二叉树的层序遍历，本质上也可以认为是广度优先遍历。</p>
+<h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>广度优先搜索与DFS不同，它是一种<strong>“广泛撒网”</strong>的玩法。从起点开始，首先检索起点的可行候选点，并按先入先出（FIFO）的方法管理。即最先进入队列的候选点，最先进行检索可行候选点的操作，之后移除该候选点，并将该点的第二层候选点加入队列，依次将第一层的候选点全部检索完成后，队列中应该只有第二层候选点，且已按第一层候选点的先后顺序排列。依次执行，每次执行后，队列中仅存某一层的全部候选点，直到完成图或树的遍历，或者找到某一<strong>最短</strong>路径。</p>
+<p>以树结构为例，广度优先搜索算法的执行流程为：</p>
+<p>A – B C D – E F C D –… – E F H I J –..– K G L</p>
+<p>其中为了详细展示队列的进出，我对B的进出队列进行了描述，B出队列同时EF进队，同理CD出战被下一层的候选点代替。此时队列中最早入队的是EF，继续搜索直到最后一层。</p>
+<p><img src="..\images\typora_srcs\SearchAlgorithm\DFS_tree.png" style="zoom:25%;"></p>
+<p>以迷宫问题为例，由于是逐层执行，所以广度优先搜索具有寻找<strong>最短路径</strong>的优势。</p>
+<p><img src="..\images\typora_srcs\SearchAlgorithm\BFS_maze.png" style="zoom:25%;"></p>
+<h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>由于候选点具有<strong>先入先出</strong>的特性，所以可以选择使用“队列”数据结构。同时定义一个<strong>布尔数组</strong>来存储所有顶点的遍历状态，顶点对应数组元素的初始值都是false，代表未遍历，遍历之后变为true。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 广度优先遍历</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bfs</span><span class="params">(Graph graph, <span class="keyword">int</span> start, <span class="keyword">boolean</span>[] visited,LinkedList&lt;Integer&gt;queue)</span> </span>&#123;</span><br><span class="line">    queue.offer(start);    </span><br><span class="line">	<span class="keyword">while</span> (!queue.isEmpty())&#123;</span><br><span class="line">    	<span class="keyword">int</span> front = queue.poll();</span><br><span class="line">        <span class="keyword">if</span>(visited[front])&#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(graph.vertexes[front].data);</span><br><span class="line">        visited[front] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> index : graph.adj[front])&#123;</span><br><span class="line">            queue.offer(index);;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+	  
+
+	  <div>
+  		<center>
+		  <div class="pagination">
+<ul class="pagination">
+	
+	
+	
+	
+	
+	
+		
+			
+			
+		
+	
+		
+			
+			
+			
+		
+			
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+	
+		
+			
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+	
+	
+		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+	
+	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
+	
+		<li class="next"><a href="/2020/04/17/Algorithm/深度优先搜索-DFS/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+	
+</ul>
+</div>
+
+		</center>
+	  </div>
+	  
+	</div> <!-- col-md-9/col-md-12 -->
+	
+  </div><!-- row -->
+
+	</div>
+  </div>
+  <div class="container-narrow">
+	<footer> <p>
+  &copy; 2020 vilogy
+  
+      with help from <a href="http://zespia.tw/hexo/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-wixo/">Wixo</a>.    
+</p> </footer>
+  </div> <!-- container-narrow -->
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.tableofcontents.min.js"></script>
+<script src="/js/tocgenerator.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+
+</body>
+</html>

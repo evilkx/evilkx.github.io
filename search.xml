@@ -4,6 +4,81 @@
   
     
     <entry>
+      <title>广度优先搜索(BFS)</title>
+      <link href="/2020/04/17/Algorithm/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-BFS/"/>
+      <url>/2020/04/17/Algorithm/%E5%B9%BF%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-BFS/</url>
+      
+        <content type="html"><![CDATA[<h2 id="广度优先搜索（Bread-First-Search）"><a href="#广度优先搜索（Bread-First-Search）" class="headerlink" title="广度优先搜索（Bread First Search）"></a>广度优先搜索（Bread First Search）</h2><h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>广度优先搜索算法也是图论中的一种经典算法，常应用于寻找一幅图中两顶点之间的<strong>最短</strong>路径，而非遍历整个图或树，这是DFS所没有的。二叉树的层序遍历，本质上也可以认为是广度优先遍历。</p><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>广度优先搜索与DFS不同，它是一种<strong>“广泛撒网”</strong>的玩法。从起点开始，首先检索起点的可行候选点，并按先入先出（FIFO）的方法管理。即最先进入队列的候选点，最先进行检索可行候选点的操作，之后移除该候选点，并将该点的第二层候选点加入队列，依次将第一层的候选点全部检索完成后，队列中应该只有第二层候选点，且已按第一层候选点的先后顺序排列。依次执行，每次执行后，队列中仅存某一层的全部候选点，直到完成图或树的遍历，或者找到某一<strong>最短</strong>路径。</p><p>以树结构为例，广度优先搜索算法的执行流程为：</p><p>A – B C D – E F C D –… – E F H I J –..– K G L</p><p>其中为了详细展示队列的进出，我对B的进出队列进行了描述，B出队列同时EF进队，同理CD出战被下一层的候选点代替。此时队列中最早入队的是EF，继续搜索直到最后一层。</p><p><img src="..\images\typora_srcs\SearchAlgorithm\DFS_tree.png" style="zoom:25%;"></p><p>以迷宫问题为例，由于是逐层执行，所以广度优先搜索具有寻找<strong>最短路径</strong>的优势。</p><p><img src="..\images\typora_srcs\SearchAlgorithm\BFS_maze.png" style="zoom:25%;"></p><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>由于候选点具有<strong>先入先出</strong>的特性，所以可以选择使用“队列”数据结构。同时定义一个<strong>布尔数组</strong>来存储所有顶点的遍历状态，顶点对应数组元素的初始值都是false，代表未遍历，遍历之后变为true。</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 广度优先遍历</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bfs</span><span class="params">(Graph graph, <span class="keyword">int</span> start, <span class="keyword">boolean</span>[] visited,LinkedList&lt;Integer&gt;queue)</span> </span>&#123;</span><br><span class="line">    queue.offer(start);    </span><br><span class="line"><span class="keyword">while</span> (!queue.isEmpty())&#123;</span><br><span class="line">    <span class="keyword">int</span> front = queue.poll();</span><br><span class="line">        <span class="keyword">if</span>(visited[front])&#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(graph.vertexes[front].data);</span><br><span class="line">        visited[front] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> index : graph.adj[front])&#123;</span><br><span class="line">            queue.offer(index);;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> BFS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>深度优先搜索(DFS)</title>
+      <link href="/2020/04/17/Algorithm/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-DFS/"/>
+      <url>/2020/04/17/Algorithm/%E6%B7%B1%E5%BA%A6%E4%BC%98%E5%85%88%E6%90%9C%E7%B4%A2-DFS/</url>
+      
+        <content type="html"><![CDATA[<h2 id="深度优先搜索（Depth-First-Search）"><a href="#深度优先搜索（Depth-First-Search）" class="headerlink" title="深度优先搜索（Depth First Search）"></a>深度优先搜索（Depth First Search）</h2><h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>深度优先搜索算法是图论中的一种经典算法，所谓深度优先，即尽可能深的搜索树的分支，多用于遍历或者搜索<strong>树</strong>和<strong>图</strong>。二叉树的前序、中序、后序遍历，本质上也可以认为是深度优先遍历。</p><p>将图与迷宫问题等价是一种思考搜索过程的有效方式，用<strong>迷宫</strong>代替<strong>图</strong>、<strong>通道</strong>代替<strong>边</strong>、<strong>路口</strong>代替<strong>顶点</strong>。</p><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>深度优先搜索是一种“一站到底”的玩法。从起点开始，任意选择一个方向出发，遇到路口时再任选一个方向继续……如此反复，当行至路之尽头时，“回溯”到上一个路口，换一个方向继续，如此反复直到完成整个结构的遍历或者找到出口为止。</p><p>以树结构为例，若要遍历整个树结构，其流程是：</p><p>A–B–E–K–&gt;B–F–&gt;B–&gt;A–C–H–G–&gt;H–&gt;C–&gt;A–D–I–&gt;D–J–L</p><p>其中 – 表示顺序遍历，–&gt;表示“回溯”</p><p><img src="..\images\typora_srcs\SearchAlgorithm\DFS_tree.png" style="zoom: 25%;"></p><p>以迷宫为例，如要寻找一条起点S到终点G的一条路径，其流程为：</p><p>从S出发，行至第一个路口时，向下（任选）继续移动，行至第二个路口时，向左移动，异常，回溯至上一个路口，向右移动，到达终点。</p><p>可以看出DFS的一个缺点，不能找到最短路径</p><p><img src="..\images\typora_srcs\SearchAlgorithm\DFS_maze_c.png" style="zoom: 25%;"></p><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>深度优先搜索算法的核心在于“回溯”，可以有两种方式来实现：</p><ol><li>利用<strong>栈</strong>后入先出(LIFO)的特性</li><li>采用<strong>递归</strong>的方式（递归本身就是基于方法调用栈来实现）</li></ol><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 深度优先遍历</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">dfs</span><span class="params">(Graph graph, <span class="keyword">int</span> start, <span class="keyword">boolean</span>[] visited)</span> </span>&#123;</span><br><span class="line">System.out.println(graph.vertexes[start].data);</span><br><span class="line">    visited[start] = <span class="keyword">true</span>;    </span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">int</span> index : graph.adj[start])&#123;        </span><br><span class="line"><span class="keyword">if</span>(!visited[index])&#123;</span><br><span class="line">            dfs(graph, index, visited);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+      
+      
+      <categories>
+          
+          <category> Algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> DFS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MLS移动最小二乘法</title>
+      <link href="/2020/04/17/MLS%E7%A7%BB%E5%8A%A8%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/"/>
+      <url>/2020/04/17/MLS%E7%A7%BB%E5%8A%A8%E6%9C%80%E5%B0%8F%E4%BA%8C%E4%B9%98%E6%B3%95/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> MLS </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ImageJ</title>
       <link href="/2020/04/17/Tools/ImageJ/"/>
       <url>/2020/04/17/Tools/ImageJ/</url>
@@ -21,181 +96,6 @@
         <tags>
             
             <tag> ImageProcessing </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/BCI/test/"/>
-      <url>/2020/04/17/BCI/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> BCI </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> BCI </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/Linux/test/"/>
-      <url>/2020/04/17/Linux/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/Git/test/"/>
-      <url>/2020/04/17/Git/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> Git </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Git </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/Arduino/test/"/>
-      <url>/2020/04/17/Arduino/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> Arduino </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Arduino </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/RaspberryPi/test/"/>
-      <url>/2020/04/17/RaspberryPi/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> RaspberryPi </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> RaspberryPi </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/C/test/"/>
-      <url>/2020/04/17/C/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> C </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> C </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/C++/test/"/>
-      <url>/2020/04/17/C++/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> C++ </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> C++ </tag>
             
         </tags>
       
@@ -230,22 +130,147 @@
     
     <entry>
       <title>test</title>
-      <link href="/2020/04/17/CyberSecurity/test/"/>
-      <url>/2020/04/17/CyberSecurity/test/</url>
+      <link href="/2020/04/17/BCI/test/"/>
+      <url>/2020/04/17/BCI/test/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
       <categories>
           
-          <category> CyberSecurity </category>
+          <category> BCI </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> CyberSecurity </tag>
+            <tag> BCI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/Git/test/"/>
+      <url>/2020/04/17/Git/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/Linux/test/"/>
+      <url>/2020/04/17/Linux/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/Python/test/"/>
+      <url>/2020/04/17/Python/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/C++/test/"/>
+      <url>/2020/04/17/C++/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/C/test/"/>
+      <url>/2020/04/17/C/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> C </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
             
         </tags>
       
@@ -305,6 +330,31 @@
     
     <entry>
       <title>test</title>
+      <link href="/2020/04/17/CyberSecurity/test/"/>
+      <url>/2020/04/17/CyberSecurity/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> CyberSecurity </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CyberSecurity </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
       <link href="/2020/04/17/OperatingSystem/test/"/>
       <url>/2020/04/17/OperatingSystem/test/</url>
       
@@ -330,22 +380,47 @@
     
     <entry>
       <title>test</title>
-      <link href="/2020/04/17/Python/test/"/>
-      <url>/2020/04/17/Python/test/</url>
+      <link href="/2020/04/17/RaspberryPi/test/"/>
+      <url>/2020/04/17/RaspberryPi/test/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
       <categories>
           
-          <category> Python </category>
+          <category> RaspberryPi </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> Python </tag>
+            <tag> RaspberryPi </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/Arduino/test/"/>
+      <url>/2020/04/17/Arduino/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Arduino </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Arduino </tag>
             
         </tags>
       
@@ -454,31 +529,6 @@
     
     
     <entry>
-      <title>动态规划</title>
-      <link href="/2020/04/17/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-      <url>/2020/04/17/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</url>
-      
-        <content type="html"><![CDATA[<p>动态规划</p>]]></content>
-      
-      
-      <categories>
-          
-          <category> Algorithm </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 动态规划 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>STM32学习日记-02</title>
       <link href="/2020/04/17/STM32/STM32%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-02/"/>
       <url>/2020/04/17/STM32/STM32%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-02/</url>
@@ -496,6 +546,31 @@
         <tags>
             
             <tag> STM32 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>动态规划</title>
+      <link href="/2020/04/17/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+      <url>/2020/04/17/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</url>
+      
+        <content type="html"><![CDATA[<p>动态规划</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> Algorithm </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 动态规划 </tag>
             
         </tags>
       
