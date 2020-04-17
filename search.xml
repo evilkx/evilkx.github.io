@@ -4,23 +4,48 @@
   
     
     <entry>
-      <title>test</title>
-      <link href="/2020/04/17/CyberSecurity/test/"/>
-      <url>/2020/04/17/CyberSecurity/test/</url>
+      <title>ImageJ</title>
+      <link href="/2020/04/17/Tools/ImageJ/"/>
+      <url>/2020/04/17/Tools/ImageJ/</url>
       
-        <content type="html"><![CDATA[]]></content>
+        <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>ImageJ是什么</p><ul><li>官网：<a href="https://imagej.net/Welcome" target="_blank" rel="noopener">https://imagej.net/Welcome</a></li><li>fiji开发版：<a href="https://imagej.net/Fiji/Downloads" target="_blank" rel="noopener">https://imagej.net/Fiji/Downloads</a></li><li>知乎专栏：<a href="https://zhuanlan.zhihu.com/c_1069243926476673024" target="_blank" rel="noopener">ImageJ实用教程</a> <a href="https://zhuanlan.zhihu.com/c_1101076075773370368" target="_blank" rel="noopener">ImageJ开发教程</a></li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul><li>win</li><li>linux</li></ul><p>解压即可</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="图片测身高流程"><a href="#图片测身高流程" class="headerlink" title="图片测身高流程"></a>图片测身高流程</h3><p>ImageJ的简单应用，找一个参照物，修改比例尺，可实现简单的图片内长度测量。</p><p>测量姚明的身高，已知标准篮球的直径是24.6cm，Analyze–&gt;Set Scale，键入0.264。</p><p>再选球员两脚脚跟的连接线的中电做底，到头部连线，Measure即得球员身高。</p><h3 id="捏脸"><a href="#捏脸" class="headerlink" title="捏脸"></a>捏脸</h3><p><strong>移动最小二乘法(Moving Least Squares, MLS)</strong></p><p>使用插件：<strong>Plugin -&gt; Transform -&gt; Interactive Moving Least Squares</strong></p><h3 id="测心率"><a href="#测心率" class="headerlink" title="测心率"></a>测心率</h3><p><a href="https://zhuanlan.zhihu.com/p/59386426" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/59386426</a></p><h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>宏编程</p>]]></content>
       
       
       <categories>
           
-          <category> CyberSecurity </category>
+          <category> Tools </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> CyberSecurity </tag>
+            <tag> ImageProcessing </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/BCI/test/"/>
+      <url>/2020/04/17/BCI/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> BCI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> BCI </tag>
             
         </tags>
       
@@ -55,56 +80,6 @@
     
     <entry>
       <title>test</title>
-      <link href="/2020/04/17/Python/test/"/>
-      <url>/2020/04/17/Python/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> Python </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/OperatingSystem/test/"/>
-      <url>/2020/04/17/OperatingSystem/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> OperatingSystem </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> OperatingSystem </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
       <link href="/2020/04/17/Git/test/"/>
       <url>/2020/04/17/Git/test/</url>
       
@@ -121,31 +96,6 @@
         <tags>
             
             <tag> Git </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/K210/test/"/>
-      <url>/2020/04/17/K210/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> K210 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> K210 </tag>
             
         </tags>
       
@@ -180,22 +130,22 @@
     
     <entry>
       <title>test</title>
-      <link href="/2020/04/17/BCI/test/"/>
-      <url>/2020/04/17/BCI/test/</url>
+      <link href="/2020/04/17/RaspberryPi/test/"/>
+      <url>/2020/04/17/RaspberryPi/test/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
       <categories>
           
-          <category> BCI </category>
+          <category> RaspberryPi </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> BCI </tag>
+            <tag> RaspberryPi </tag>
             
         </tags>
       
@@ -255,31 +205,6 @@
     
     <entry>
       <title>test</title>
-      <link href="/2020/04/17/OpenCV/test/"/>
-      <url>/2020/04/17/OpenCV/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> OpenCV </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> OpenCV </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
       <link href="/2020/04/17/CVM/test/"/>
       <url>/2020/04/17/CVM/test/</url>
       
@@ -305,22 +230,122 @@
     
     <entry>
       <title>test</title>
-      <link href="/2020/04/17/RaspberryPi/test/"/>
-      <url>/2020/04/17/RaspberryPi/test/</url>
+      <link href="/2020/04/17/CyberSecurity/test/"/>
+      <url>/2020/04/17/CyberSecurity/test/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
       <categories>
           
-          <category> RaspberryPi </category>
+          <category> CyberSecurity </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> RaspberryPi </tag>
+            <tag> CyberSecurity </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/OpenCV/test/"/>
+      <url>/2020/04/17/OpenCV/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> OpenCV </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/K210/test/"/>
+      <url>/2020/04/17/K210/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> K210 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> K210 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/OperatingSystem/test/"/>
+      <url>/2020/04/17/OperatingSystem/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> OperatingSystem </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OperatingSystem </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/Python/test/"/>
+      <url>/2020/04/17/Python/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Python </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
             
         </tags>
       

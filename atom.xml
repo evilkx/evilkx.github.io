@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://vilogy.citvilab.cn/"/>
-  <updated>2020-04-17T05:03:34.552Z</updated>
+  <updated>2020-04-17T07:43:42.594Z</updated>
   <id>http://vilogy.citvilab.cn/</id>
   
   <author>
@@ -17,20 +17,47 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>ImageJ</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/Tools/ImageJ/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/Tools/ImageJ/</id>
+    <published>2020-04-17T06:16:09.000Z</published>
+    <updated>2020-04-17T07:43:42.594Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h2><p>ImageJ是什么</p><ul><li>官网：<a href="https://imagej.net/Welcome" target="_blank" rel="noopener">https://imagej.net/Welcome</a></li><li>fiji开发版：<a href="https://imagej.net/Fiji/Downloads" target="_blank" rel="noopener">https://imagej.net/Fiji/Downloads</a></li><li>知乎专栏：<a href="https://zhuanlan.zhihu.com/c_1069243926476673024" target="_blank" rel="noopener">ImageJ实用教程</a> <a href="https://zhuanlan.zhihu.com/c_1101076075773370368" target="_blank" rel="noopener">ImageJ开发教程</a></li></ul><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><ul><li>win</li><li>linux</li></ul><p>解压即可</p><h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="图片测身高流程"><a href="#图片测身高流程" class="headerlink" title="图片测身高流程"></a>图片测身高流程</h3><p>ImageJ的简单应用，找一个参照物，修改比例尺，可实现简单的图片内长度测量。</p><p>测量姚明的身高，已知标准篮球的直径是24.6cm，Analyze–&gt;Set Scale，键入0.264。</p><p>再选球员两脚脚跟的连接线的中电做底，到头部连线，Measure即得球员身高。</p><h3 id="捏脸"><a href="#捏脸" class="headerlink" title="捏脸"></a>捏脸</h3><p><strong>移动最小二乘法(Moving Least Squares, MLS)</strong></p><p>使用插件：<strong>Plugin -&gt; Transform -&gt; Interactive Moving Least Squares</strong></p><h3 id="测心率"><a href="#测心率" class="headerlink" title="测心率"></a>测心率</h3><p><a href="https://zhuanlan.zhihu.com/p/59386426" target="_blank" rel="noopener">https://zhuanlan.zhihu.com/p/59386426</a></p><h2 id="开发"><a href="#开发" class="headerlink" title="开发"></a>开发</h2><p>宏编程</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h2&gt;&lt;p&gt;ImageJ是什么&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;官网：&lt;a href=&quot;https://imagej.net/Welcome&quot; target=
+      
+    
+    </summary>
+    
+      <category term="Tools" scheme="http://vilogy.citvilab.cn/categories/Tools/"/>
+    
+    
+      <category term="ImageProcessing" scheme="http://vilogy.citvilab.cn/tags/ImageProcessing/"/>
+    
+  </entry>
+  
+  <entry>
     <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/CyberSecurity/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/CyberSecurity/test/</id>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/BCI/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/BCI/test/</id>
     <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:03:34.552Z</updated>
+    <updated>2020-04-17T05:02:06.075Z</updated>
     
     <summary type="html">
     
     </summary>
     
-      <category term="CyberSecurity" scheme="http://vilogy.citvilab.cn/categories/CyberSecurity/"/>
+      <category term="BCI" scheme="http://vilogy.citvilab.cn/categories/BCI/"/>
     
     
-      <category term="CyberSecurity" scheme="http://vilogy.citvilab.cn/tags/CyberSecurity/"/>
+      <category term="BCI" scheme="http://vilogy.citvilab.cn/tags/BCI/"/>
     
   </entry>
   
@@ -54,42 +81,6 @@
   
   <entry>
     <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/Python/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/Python/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:05:25.053Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="Python" scheme="http://vilogy.citvilab.cn/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="http://vilogy.citvilab.cn/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/OperatingSystem/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/OperatingSystem/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:05:01.536Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="OperatingSystem" scheme="http://vilogy.citvilab.cn/categories/OperatingSystem/"/>
-    
-    
-      <category term="OperatingSystem" scheme="http://vilogy.citvilab.cn/tags/OperatingSystem/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
     <link href="http://vilogy.citvilab.cn/2020/04/17/Git/test/"/>
     <id>http://vilogy.citvilab.cn/2020/04/17/Git/test/</id>
     <published>2020-04-17T04:58:58.000Z</published>
@@ -103,24 +94,6 @@
     
     
       <category term="Git" scheme="http://vilogy.citvilab.cn/tags/Git/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/K210/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/K210/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:01:35.015Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="K210" scheme="http://vilogy.citvilab.cn/categories/K210/"/>
-    
-    
-      <category term="K210" scheme="http://vilogy.citvilab.cn/tags/K210/"/>
     
   </entry>
   
@@ -144,19 +117,19 @@
   
   <entry>
     <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/BCI/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/BCI/test/</id>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/RaspberryPi/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/RaspberryPi/test/</id>
     <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:02:06.075Z</updated>
+    <updated>2020-04-17T05:00:29.673Z</updated>
     
     <summary type="html">
     
     </summary>
     
-      <category term="BCI" scheme="http://vilogy.citvilab.cn/categories/BCI/"/>
+      <category term="RaspberryPi" scheme="http://vilogy.citvilab.cn/categories/RaspberryPi/"/>
     
     
-      <category term="BCI" scheme="http://vilogy.citvilab.cn/tags/BCI/"/>
+      <category term="RaspberryPi" scheme="http://vilogy.citvilab.cn/tags/RaspberryPi/"/>
     
   </entry>
   
@@ -198,24 +171,6 @@
   
   <entry>
     <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/OpenCV/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/OpenCV/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:04:32.817Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="OpenCV" scheme="http://vilogy.citvilab.cn/categories/OpenCV/"/>
-    
-    
-      <category term="OpenCV" scheme="http://vilogy.citvilab.cn/tags/OpenCV/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
     <link href="http://vilogy.citvilab.cn/2020/04/17/CVM/test/"/>
     <id>http://vilogy.citvilab.cn/2020/04/17/CVM/test/</id>
     <published>2020-04-17T04:58:58.000Z</published>
@@ -234,19 +189,91 @@
   
   <entry>
     <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/RaspberryPi/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/RaspberryPi/test/</id>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/CyberSecurity/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/CyberSecurity/test/</id>
     <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:00:29.673Z</updated>
+    <updated>2020-04-17T05:03:34.552Z</updated>
     
     <summary type="html">
     
     </summary>
     
-      <category term="RaspberryPi" scheme="http://vilogy.citvilab.cn/categories/RaspberryPi/"/>
+      <category term="CyberSecurity" scheme="http://vilogy.citvilab.cn/categories/CyberSecurity/"/>
     
     
-      <category term="RaspberryPi" scheme="http://vilogy.citvilab.cn/tags/RaspberryPi/"/>
+      <category term="CyberSecurity" scheme="http://vilogy.citvilab.cn/tags/CyberSecurity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/OpenCV/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/OpenCV/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:04:32.817Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="OpenCV" scheme="http://vilogy.citvilab.cn/categories/OpenCV/"/>
+    
+    
+      <category term="OpenCV" scheme="http://vilogy.citvilab.cn/tags/OpenCV/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/K210/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/K210/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:01:35.015Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="K210" scheme="http://vilogy.citvilab.cn/categories/K210/"/>
+    
+    
+      <category term="K210" scheme="http://vilogy.citvilab.cn/tags/K210/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/OperatingSystem/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/OperatingSystem/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:05:01.536Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="OperatingSystem" scheme="http://vilogy.citvilab.cn/categories/OperatingSystem/"/>
+    
+    
+      <category term="OperatingSystem" scheme="http://vilogy.citvilab.cn/tags/OperatingSystem/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/Python/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/Python/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:05:25.053Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Python" scheme="http://vilogy.citvilab.cn/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://vilogy.citvilab.cn/tags/Python/"/>
     
   </entry>
   
@@ -388,31 +415,6 @@
     <updated>2020-04-17T04:56:06.771Z</updated>
     
     <summary type="html">
-    
-    </summary>
-    
-      <category term="STM32" scheme="http://vilogy.citvilab.cn/categories/STM32/"/>
-    
-    
-      <category term="STM32" scheme="http://vilogy.citvilab.cn/tags/STM32/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>STM32学习日记-01</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/15/STM32/STM32%E5%AD%A6%E4%B9%A0%E6%97%A5%E8%AE%B0-01/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/15/STM32/STM32学习日记-01/</id>
-    <published>2020-04-15T14:56:18.000Z</published>
-    <updated>2020-04-17T04:56:17.598Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="STM32学习日记-01"><a href="#STM32学习日记-01" class="headerlink" title="STM32学习日记 - 01"></a>STM32学习日记 - 01</h1><p>由于项目中需要一个高性能、低功耗的执行机构开发板，于是选择了搭载STM32F407为主控的核心板来做实验。其实之前多少接触过一些STM32，但是一直没有系统的学习，感觉就是“高级单片机”，正好趁这个机会，系统的学习一下。</p><p>最近陆续的拿到了几块板子，树莓派Zero W，STM32F407，Xilinx ZYNQ，还有一些外设。有的已经烧上系统跑了起来，有的还没有点亮过，每天把玩着这些板子真是有满足感。</p><p>这是一个开篇嘛，就聊聊感受好啦。今天也一直在忙别的（算法真好玩），晚上才有时间来鼓捣鼓捣板子。前几天学AltiumDesign，练手画了一块STM32F03C8T6的核心板，双层PCB，还挺有意思的，让我回想起之前被PCB布线支配的恐惧。</p><p><img src="https://img2020.cnblogs.com/blog/1126664/202004/1126664-20200415224627164-480264179.png" alt="stm32f103-core" style="zoom: 33%;"></p><p>但是双层PCB相对来说浪费了板子背面的控件，想把所有模块设计的比较小的时候，就需要2层往上的PCB设计，及高速PCB设计等相关知识。任重道远。</p><p>说起来，其实最近很长一段时间，我都处在一种<strong>极度焦虑</strong>的状态，每天都在接触自己的知识边界，反复锤炼自己，牙疼，晚上辗转反侧睡不着觉。做梦都是在做开发板，在推算法。我对感兴趣的知识是比较贪婪的，凡是我了解到的都想要学会。这段时间常常自喻，如果知识是一片海，那我就快要溺死了。</p><h3 id="今天做了些什么"><a href="#今天做了些什么" class="headerlink" title="今天做了些什么"></a>今天做了些什么</h3><ul><li>早起突然有个想法，想反编译mindviewer，回来查了一些资料，可行。但是不想污染PC的蓝牙串口而作罢。我希望实现底层的板子直接拿TGAM的数据流做处理控制，不需要单独分出个板子来做高级处理。所以目前的目标就是把STM32的蓝牙模块搞通。</li><li>学了几种排序算法：插入排序、归并排序、快速排序。</li><li>学习了几种搜索算法：广度优先、深度优先、A*。</li><li>其实这些基础的排序搜索算法都是堆栈和队列的应用，但是我比较笨，接受慢，明天再来写算法部分的总结文章。</li><li>学习了opencv图像处理的一些基础知识和API。锐化，浮雕，合并，反色…感觉能做个PS Lite,hhh.</li><li>调试了STM32核心板，基本流程跑了一遍，舒服。</li></ul>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h1 id=&quot;STM32学习日记-01&quot;&gt;&lt;a href=&quot;#STM32学习日记-01&quot; class=&quot;headerlink&quot; title=&quot;STM32学习日记 - 01&quot;&gt;&lt;/a&gt;STM32学习日记 - 01&lt;/h1&gt;&lt;p&gt;由于项目中需要一个高性能、低功耗的执行机构开发板，于
-      
     
     </summary>
     
