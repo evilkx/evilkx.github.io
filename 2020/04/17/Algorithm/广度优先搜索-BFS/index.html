@@ -63,9 +63,9 @@
 <p>以树结构为例，广度优先搜索算法的执行流程为：</p>
 <p>A – B C D – E F C D –… – E F H I J –..– K G L</p>
 <p>其中为了详细展示队列的进出，我对B的进出队列进行了描述，B出队列同时EF进队，同理CD出战被下一层的候选点代替。此时队列中最早入队的是EF，继续搜索直到最后一层。</p>
-<p><img src="..\images\typora_srcs\SearchAlgorithm\DFS_tree.png" style="zoom:25%;"></p>
+<p><img src="https://vilogy.citvilab.cn/images/typora_srcs/SearchAlgorithm/DFS_tree.png" style="zoom:25%;"></p>
 <p>以迷宫问题为例，由于是逐层执行，所以广度优先搜索具有寻找<strong>最短路径</strong>的优势。</p>
-<p><img src="..\images\typora_srcs\SearchAlgorithm\BFS_maze.png" style="zoom:25%;"></p>
+<p><img src="https://vilogy.citvilab.cn/images/typora_srcs/SearchAlgorithm/BFS_maze.png" style="zoom:25%;"></p>
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>由于候选点具有<strong>先入先出</strong>的特性，所以可以选择使用“队列”数据结构。同时定义一个<strong>布尔数组</strong>来存储所有顶点的遍历状态，顶点对应数组元素的初始值都是false，代表未遍历，遍历之后变为true。</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * 广度优先遍历</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">bfs</span><span class="params">(Graph graph, <span class="keyword">int</span> start, <span class="keyword">boolean</span>[] visited,LinkedList&lt;Integer&gt;queue)</span> </span>&#123;</span><br><span class="line">    queue.offer(start);    </span><br><span class="line">	<span class="keyword">while</span> (!queue.isEmpty())&#123;</span><br><span class="line">    	<span class="keyword">int</span> front = queue.poll();</span><br><span class="line">        <span class="keyword">if</span>(visited[front])&#123;</span><br><span class="line">            <span class="keyword">continue</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(graph.vertexes[front].data);</span><br><span class="line">        visited[front] = <span class="keyword">true</span>;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> index : graph.adj[front])&#123;</span><br><span class="line">            queue.offer(index);;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 	  
@@ -82,63 +82,17 @@
 	
 		
 			
-			
 		
 	
 		
 			
 			
-			
-		
-			
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
-		
-	
 		
 	
 		
 			
-		
-	
-		
 			
-		
-	
-		
 			
-		
-	
-		
-			
-		
-	
-		
-	
 		
 			
 		
@@ -172,6 +126,56 @@
 		
 	
 		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+	
+		
+			
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
 	
 		
 	
@@ -179,7 +183,7 @@
 	
 	
 	
-		<li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+		<li class="prev"><a href="/2020/04/17/A-Search/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
 	
 	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
 	

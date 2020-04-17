@@ -64,11 +64,11 @@
 <p>以树结构为例，若要遍历整个树结构，其流程是：</p>
 <p>A–B–E–K–&gt;B–F–&gt;B–&gt;A–C–H–G–&gt;H–&gt;C–&gt;A–D–I–&gt;D–J–L</p>
 <p>其中 – 表示顺序遍历，–&gt;表示“回溯”</p>
-<p><img src="..\images\typora_srcs\SearchAlgorithm\DFS_tree.png" style="zoom: 25%;"></p>
+<p><img src="https://vilogy.citvilab.cn/images/typora_srcs/SearchAlgorithm/DFS_tree.png" style="zoom: 25%;"></p>
 <p>以迷宫为例，如要寻找一条起点S到终点G的一条路径，其流程为：</p>
 <p>从S出发，行至第一个路口时，向下（任选）继续移动，行至第二个路口时，向左移动，异常，回溯至上一个路口，向右移动，到达终点。</p>
 <p>可以看出DFS的一个缺点，不能找到最短路径</p>
-<p><img src="..\images\typora_srcs\SearchAlgorithm\DFS_maze_c.png" style="zoom: 25%;"></p>
+<p><img src="https://vilogy.citvilab.cn/images/typora_srcs/SearchAlgorithm/DFS_maze_c.png" style="zoom: 25%;"></p>
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>深度优先搜索算法的核心在于“回溯”，可以有两种方式来实现：</p>
 <ol>
 <li>利用<strong>栈</strong>后入先出(LIFO)的特性</li>
@@ -86,6 +86,10 @@
 	
 	
 	
+	
+		
+			
+		
 	
 		
 			
@@ -190,7 +194,7 @@
 	
 	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
 	
-		<li class="next"><a href="/2020/04/17/MLS移动最小二乘法/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
+		<li class="next"><a href="/2020/04/17/Algorithm/MLS移动最小二乘法/" class="alignright next">next<i class="fa fa-arrow-circle-o-right"></i></a></li>
 	
 </ul>
 </div>
