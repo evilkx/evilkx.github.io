@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>VILOGY</title>
+  <title>VILOGY - Talk is cheap</title>
   
   <subtitle>Tech, Science, Life</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://vilogy.citvilab.cn/"/>
-  <updated>2020-04-17T03:47:10.948Z</updated>
+  <updated>2020-04-17T04:07:47.344Z</updated>
   <id>http://vilogy.citvilab.cn/</id>
   
   <author>
@@ -21,9 +21,17 @@
     <link href="http://vilogy.citvilab.cn/2020/04/17/Algorithm/%E6%8E%92%E5%BA%8F/"/>
     <id>http://vilogy.citvilab.cn/2020/04/17/Algorithm/排序/</id>
     <published>2020-04-17T03:09:34.000Z</published>
-    <updated>2020-04-17T03:47:10.948Z</updated>
+    <updated>2020-04-17T04:07:47.344Z</updated>
+    
+    <content type="html"><![CDATA[<p>排序</p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;排序&lt;/p&gt;
+
+      
     
     </summary>
     
@@ -39,9 +47,17 @@
     <link href="http://vilogy.citvilab.cn/2020/04/17/Algorithm/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
     <id>http://vilogy.citvilab.cn/2020/04/17/Algorithm/数据结构/</id>
     <published>2020-04-17T03:08:44.000Z</published>
-    <updated>2020-04-17T03:46:54.421Z</updated>
+    <updated>2020-04-17T04:07:52.340Z</updated>
+    
+    <content type="html"><![CDATA[<p>排序</p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;排序&lt;/p&gt;
+
+      
     
     </summary>
     
@@ -57,9 +73,17 @@
     <link href="http://vilogy.citvilab.cn/2020/04/17/Algorithm/%E6%90%9C%E7%B4%A2/"/>
     <id>http://vilogy.citvilab.cn/2020/04/17/Algorithm/搜索/</id>
     <published>2020-04-17T03:08:35.000Z</published>
-    <updated>2020-04-17T03:46:41.573Z</updated>
+    <updated>2020-04-17T04:07:57.812Z</updated>
+    
+    <content type="html"><![CDATA[<p>搜索</p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;搜索&lt;/p&gt;
+
+      
     
     </summary>
     
@@ -75,9 +99,17 @@
     <link href="http://vilogy.citvilab.cn/2020/04/17/Algorithm/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95/"/>
     <id>http://vilogy.citvilab.cn/2020/04/17/Algorithm/贪婪算法/</id>
     <published>2020-04-17T03:07:33.000Z</published>
-    <updated>2020-04-17T03:45:58.543Z</updated>
+    <updated>2020-04-17T04:08:06.230Z</updated>
+    
+    <content type="html"><![CDATA[<p>贪婪算法</p>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;p&gt;贪婪算法&lt;/p&gt;
+
+      
     
     </summary>
     
@@ -85,24 +117,6 @@
     
     
       <category term="贪婪算法" scheme="http://vilogy.citvilab.cn/tags/%E8%B4%AA%E5%A9%AA%E7%AE%97%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>动态规划</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/Algorithm/动态规划/</id>
-    <published>2020-04-17T03:06:44.000Z</published>
-    <updated>2020-04-17T03:47:17.416Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="Algorithm" scheme="http://vilogy.citvilab.cn/categories/Algorithm/"/>
-    
-    
-      <category term="动态规划" scheme="http://vilogy.citvilab.cn/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
     
   </entry>
   
@@ -125,6 +139,363 @@
   </entry>
   
   <entry>
+    <title>动态规划</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/Algorithm/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/Algorithm/动态规划/</id>
+    <published>2020-04-17T03:06:44.000Z</published>
+    <updated>2020-04-17T04:07:39.754Z</updated>
+    
+    <content type="html"><![CDATA[<p>动态规划</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;动态规划&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://vilogy.citvilab.cn/categories/Algorithm/"/>
+    
+    
+      <category term="动态规划" scheme="http://vilogy.citvilab.cn/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020-3-27</title>
+    <link href="http://vilogy.citvilab.cn/2020/03/27/Essay/2020-3-27/"/>
+    <id>http://vilogy.citvilab.cn/2020/03/27/Essay/2020-3-27/</id>
+    <published>2020-03-27T15:44:55.000Z</published>
+    <updated>2020-04-17T04:13:32.279Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="日记-流水账"><a href="#日记-流水账" class="headerlink" title="日记 流水账"></a><del>日记</del> 流水账</h2><p>今天是周五，如果是工作日，It’s a big day，但是现在，反而希望一直工作下去。</p><p>今天提交了公安部的备案，感觉自己的信息已经完全被有关部门掌握了，但行好事，莫问前程。</p><p>今天研究了Interactive webpages，真是个有趣的技术。结合three.js可以实现很多高级功能，最近在策划一个交互式学习python的网页，主要技术路线–&gt;框架–&gt;教程编写–&gt;测试，等做成了挂出来测试一下，如果可行，就可以实现一个比较高效和科学的python学习方式。可以大幅降低学习门槛和成本，估计可以带动好一批本来没计划学习python的人。</p><p>今天重新提起了一些往事，说内心没有波澜是假的，但也没有当时那种心情了。我这个人有过人的愚钝，所以看起来大智若愚，其实“是大于弱智”。过去就过去了，我不想也没兴趣再去激起一段回忆，回忆最好只呆在过去，充满未知的未来才是可期的。</p><p>《西游记》中孙悟空至西牛贺州寻菩提祖师，拜师学艺时，见洞门口的崖头立了一座石碑，上书：</p><blockquote><p>“灵台方寸山，斜月三星洞”</p><p>美猴王十分欢喜道：“此间人果是朴实，果有此山此洞。”看勾多时，不敢敲门。且去跳上松枝梢头，摘松子吃了顽耍。</p></blockquote><p>其实对这句话的解释有很多，但是流传比较广的说法是一对字谜：</p><p>斜月三星，指“心”</p><p>灵台方寸，指“寻”</p><p>“寻心”便是修行的意义</p><hr><blockquote><p>“所以，到底是谁要取经，又是谁说吃唐僧肉可以长生不老。”</p></blockquote><p>无人取经，无经可取，漫漫长路，不过心行；</p><p>唐僧肉即是无生法，妖魔鬼怪预示尘世之魔考，破参之人都必经历。</p><hr><p>明天继续加油！</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;日记-流水账&quot;&gt;&lt;a href=&quot;#日记-流水账&quot; class=&quot;headerlink&quot; title=&quot;日记 流水账&quot;&gt;&lt;/a&gt;&lt;del&gt;日记&lt;/del&gt; 流水账&lt;/h2&gt;&lt;p&gt;今天是周五，如果是工作日，It’s a big day，但是现在，反而希望一直工作下去
+      
+    
+    </summary>
+    
+      <category term="Zzz" scheme="http://vilogy.citvilab.cn/categories/Zzz/"/>
+    
+    
+      <category term="Life" scheme="http://vilogy.citvilab.cn/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2020-3-26</title>
+    <link href="http://vilogy.citvilab.cn/2020/03/26/Essay/2020-3-26/"/>
+    <id>http://vilogy.citvilab.cn/2020/03/26/Essay/2020-3-26/</id>
+    <published>2020-03-26T14:54:24.000Z</published>
+    <updated>2020-04-17T04:13:56.266Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="网站"><a href="#网站" class="headerlink" title="网站"></a>网站</h2><p>今天域名备案终于批下来了，但是由于过了很久，我一下子找不到之前做好的网站了，然后稀里糊涂整理了一下文件夹，清空回收站后，突然在VS Code里发现之前编辑过的html文件就在刚删掉的回收站里。心态当时就崩了呀，当时花了好几天的时间来做这个网站。</p><p>不过往好了想，就算是命运之神强行让我扔掉了一版不太完美的网站，给了我一张白纸，一次重新开始，做的更好的机会。好好珍惜，就能把后悔化成一种机遇，化腐朽为神奇。</p><h2 id="机会"><a href="#机会" class="headerlink" title="机会"></a>机会</h2><p>踏破铁鞋无觅处，终于找到一种交互式编程的方法，核心代码整理出来了，明天部署到服务端看下效果。</p><p>这段时间陷入深深的焦虑中，因为接触到了知识的边界，也希望自己能变得更好，只是方向太多反而一下子失去了方向。上网查了一些方法，发现很多人在从校园初入社会的前一两年里都会有类似的情绪，是一种主动式的面对差距的焦虑情绪，其本质是一种希望自己变好的期冀。最好的办法就是找一个切入点，做深下去，能站住脚跟。以一点为支撑，才能立下线和面。</p><h2 id="自己"><a href="#自己" class="headerlink" title="自己"></a>自己</h2><p>我之前是一个桀骜不驯、格格不入的人，在高中毕业总结上写下乔布斯撰写的1997年苹果的广告词</p><blockquote><p>“特立独行、桀骜不驯、格格不入、惹是生非。</p><p>用与众不同的眼光看待事物，不喜欢墨守成规，也不愿安于现状。”</p></blockquote><p>我还年轻，还不知道怎么去评价和总结彼时的自己。只是这些话就像运行在另一个线程中的程序，始终在影响着我，或好或坏，终成就了我。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;网站&quot;&gt;&lt;a href=&quot;#网站&quot; class=&quot;headerlink&quot; title=&quot;网站&quot;&gt;&lt;/a&gt;网站&lt;/h2&gt;&lt;p&gt;今天域名备案终于批下来了，但是由于过了很久，我一下子找不到之前做好的网站了，然后稀里糊涂整理了一下文件夹，清空回收站后，突然在VS Code
+      
+    
+    </summary>
+    
+      <category term="Zzz" scheme="http://vilogy.citvilab.cn/categories/Zzz/"/>
+    
+    
+      <category term="Life" scheme="http://vilogy.citvilab.cn/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>元夕</title>
+    <link href="http://vilogy.citvilab.cn/2019/02/19/Essay/%E5%85%83%E5%A4%95/"/>
+    <id>http://vilogy.citvilab.cn/2019/02/19/Essay/元夕/</id>
+    <published>2019-02-19T15:20:14.000Z</published>
+    <updated>2020-04-17T04:15:02.509Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>东风夜放花千树，更吹落，心如雨。宝马雕车香满路。凤箫声动，玉壶光转，一夜鱼龙舞。<br>蛾儿雪柳黄金缕，笑语盈盈暗香去。众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。</p></blockquote><p>生活的节奏总是被琐碎打断，本来积极的生活可能因为一点小事而焦虑消极。当时会很烦，但是回过头来想这些情绪都是没有意义的，人活着，follow your heart。很简单的道理，我上初中就知道，但是可能现在才切身体会做自己的艰难苦楚。</p><p>我总是认为，人与人之间的关系最大的尊重就是——“Don’t judge me”即使是亲密的人，都为对方留下足够的空间，不强求，不无赖。对不亲近的人，自认更加理所当然的保持距离，不会因为寂寞而抱团取暖，也不会因为可怜，而怜香惜玉。</p><p>寒假倒计时了，作业在补的过程中，飞机停在那儿好久了，都落灰了。也因为忙，和很多朋友走远了，但我相信是值得的，因为我是在为未来努力。虽然，他们说我自以为是，他们都在享受生活，他们说我做的不对。我也曾动摇过，但体验过后清晰地知道那不是我想要的生活，也许我这样的人就应该活在苦难中，苦中作乐，炼铁成钢。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;东风夜放花千树，更吹落，心如雨。宝马雕车香满路。凤箫声动，玉壶光转，一夜鱼龙舞。&lt;br&gt;蛾儿雪柳黄金缕，笑语盈盈暗香去。众里寻他千百度，蓦然回首，那人却在，灯火阑珊处。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;生活的节奏总是被琐碎打断，本来积极的
+      
+    
+    </summary>
+    
+      <category term="Zzz" scheme="http://vilogy.citvilab.cn/categories/Zzz/"/>
+    
+    
+      <category term="Life" scheme="http://vilogy.citvilab.cn/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>初七杂想</title>
+    <link href="http://vilogy.citvilab.cn/2019/02/11/Essay/%E5%88%9D%E4%B8%83%E6%9D%82%E6%83%B3/"/>
+    <id>http://vilogy.citvilab.cn/2019/02/11/Essay/初七杂想/</id>
+    <published>2019-02-11T15:01:29.000Z</published>
+    <updated>2020-04-17T04:14:11.960Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h4><p>今天的进度随着京东物流的进度而进行的，把摄像头的音频模块去掉，视频模块的线重组，焊接，打上热熔胶，外面裹上黑色绝缘胶带。强迫症的福音。测试一下可以读取USB的图像数据，明天再做做图像识别的软件，看了论文，不能在图像识别上做太多的算法，这个领域的水太深了，看了篇《人机交互中手势和姿态识别的算法研究》的清华大学博士论文，把我实力劝退了……打扰了，先睡为敬。</p><h4 id="生活"><a href="#生活" class="headerlink" title="生活"></a>生活</h4><p>今天和高中老班谈了谈，可能因为高中时没少让他头疼，所以再见面时，刚开始除了笑，不知道做啥。我真的是发自内心的笑，我觉得学校变小了，图书馆的书变少了，教学楼变矮了，同学变得和蔼可亲了，可能是我长大了吧。说实话下午和老班谈的时候，我们一直是向前看的，谈考研，谈工作，谈未来，尽管老班对我高三后段的表现不满意，但是我当时没有一丝的后悔。这么说的意思是，现在，在我打下这行字的时候，我后悔了。看着来来往往高一高二的学生家长，抱着期待，畏惧，严肃等一系列的心态迈入高中时，我觉得很幸运，还有机会。就像我上高中的时候，觉得当时是我距离梦想最近的阶段，现在也是。<br>唠唠叨叨说了好多，其实也是有感而发的即兴之谈，没有逻辑，只是从脑中倾洒在键盘。不论今年会遇到什么情况，不忘初心，砥砺前行，相信无论雪下的多么大，总有人在帮你，总有太阳会出现。与君共勉。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;工作&quot;&gt;&lt;a href=&quot;#工作&quot; class=&quot;headerlink&quot; title=&quot;工作&quot;&gt;&lt;/a&gt;工作&lt;/h4&gt;&lt;p&gt;今天的进度随着京东物流的进度而进行的，把摄像头的音频模块去掉，视频模块的线重组，焊接，打上热熔胶，外面裹上黑色绝缘胶带。强迫症的福音。测试一
+      
+    
+    </summary>
+    
+      <category term="Zzz" scheme="http://vilogy.citvilab.cn/categories/Zzz/"/>
+    
+    
+      <category term="Life" scheme="http://vilogy.citvilab.cn/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>2019</title>
+    <link href="http://vilogy.citvilab.cn/2019/02/08/Essay/2019/"/>
+    <id>http://vilogy.citvilab.cn/2019/02/08/Essay/2019/</id>
+    <published>2019-02-08T02:08:15.000Z</published>
+    <updated>2020-04-17T04:13:10.918Z</updated>
+    
+    <content type="html"><![CDATA[<p>还没来得及好好总结一下2018，2019就急忙忙地来了。可能生活就是这样肆无忌惮地打乱你的计划，让你在手足无措中，发现原本被忽略的美好。</p><h2 id="2018"><a href="#2018" class="headerlink" title="2018"></a>2018</h2><p>2018年开始的比较茫然，青黄不接处出现，殚精竭力挽狂澜于既倒。</p><p>2018年上半年。参加SYB培训，每周六天安排紧凑的课程。和同学一起参加的互联网+的比赛，也因为一些原因止步预赛。熬夜看过世界杯，见过凌晨四点多的常州；喝啤酒烫过头，没抽过烟；听了一千多段相声，其中有四百多段听了两遍；暑假考了科二，却迟迟约不上科三。好在较圆满地完成了学期的任务。</p><p>下半年，课程众多，还有6门课程设计和实践，安排空前紧张。10月在老师的指导下，和同学组队参加虚拟仪器比赛，分成了两个小组，负责飞行器的设计与制作。最后组织调整，申报了校级重点大创项目，承担主要责任。11月跟队去南航参加比赛，学习参观。看过凌晨两点的南京后，6点半起床参加比赛，感受大都市的繁华与寂寥。1月，一周五门考试的魔鬼，天天在实验室赶进度。学期结束后在实验室待了一周，因无暖气而感冒。考研集训8天，回到家后第二天就开始练车的8天集训，也算冬练了三九，夏练了三伏。所幸，通过了南田石的考试，拿上驾照第二天就开始增加自己的里程数，已经有了城市，高速，乡镇，农村，雨天，夜间的驾驶经验。春节期间也成为了父亲安心喝酒的保障。</p><p>这是我2018 的一个主要脉络，人是复杂的，就像大树，会有很多枝叶遮遮掩掩，尽管模糊，但他们总会以某种形式在我身上体现。感谢2018遇到的每一个人，感谢父母坚实地在身后做我的后盾，也感谢2018年砥砺前行的自己。还有很多不足与缺点，保持谦虚，继续努力。</p><h2 id="2019"><a href="#2019" class="headerlink" title="2019"></a>2019</h2><p><strong> 2019年会有一些计划： </strong></p><ul><li>考上理想的研究生学院</li><li>年后尽快将飞行器项目完善，开学后要参加比赛。</li><li>自驾游，去看祖国的大好河山。</li></ul>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;还没来得及好好总结一下2018，2019就急忙忙地来了。可能生活就是这样肆无忌惮地打乱你的计划，让你在手足无措中，发现原本被忽略的美好。&lt;/p&gt;
+&lt;h2 id=&quot;2018&quot;&gt;&lt;a href=&quot;#2018&quot; class=&quot;headerlink&quot; title=&quot;2018&quot;&gt;&lt;/
+      
+    
+    </summary>
+    
+      <category term="Zzz" scheme="http://vilogy.citvilab.cn/categories/Zzz/"/>
+    
+    
+      <category term="Life" scheme="http://vilogy.citvilab.cn/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>结束一阶段</title>
+    <link href="http://vilogy.citvilab.cn/2018/05/27/Essay/%E7%BB%93%E6%9D%9F%E4%B8%80%E9%98%B6%E6%AE%B5/"/>
+    <id>http://vilogy.citvilab.cn/2018/05/27/Essay/结束一阶段/</id>
+    <published>2018-05-27T02:39:01.000Z</published>
+    <updated>2020-04-17T04:14:30.151Z</updated>
+    
+    <content type="html"><![CDATA[<h4 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h4><ul><li>和南京同学合作的互联网创业比赛，因为时间原因，提前结束了</li><li>校级电子设计大赛，语音识别，三等奖</li><li>图像识别的接口可用</li></ul><p>这学期过的好快，6.11开始这学期的考试了。我不善于做总结，因为觉得始终在路上。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h4 id=&quot;总结&quot;&gt;&lt;a href=&quot;#总结&quot; class=&quot;headerlink&quot; title=&quot;总结&quot;&gt;&lt;/a&gt;总结&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;和南京同学合作的互联网创业比赛，因为时间原因，提前结束了&lt;/li&gt;
+&lt;li&gt;校级电子设计大赛，语音识别，三等奖&lt;/li&gt;
+&lt;li
+      
+    
+    </summary>
+    
+      <category term="Zzz" scheme="http://vilogy.citvilab.cn/categories/Zzz/"/>
+    
+    
+      <category term="Life" scheme="http://vilogy.citvilab.cn/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>挥出羞羞的铁拳</title>
+    <link href="http://vilogy.citvilab.cn/2017/10/22/Essay/%E6%8C%A5%E5%87%BA%E7%BE%9E%E7%BE%9E%E7%9A%84%E9%93%81%E6%8B%B3/"/>
+    <id>http://vilogy.citvilab.cn/2017/10/22/Essay/挥出羞羞的铁拳/</id>
+    <published>2017-10-22T08:45:17.000Z</published>
+    <updated>2020-04-17T04:14:20.363Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="2017-10-22"><a href="#2017-10-22" class="headerlink" title="2017-10-22"></a>2017-10-22</h2><p>午时返校，中途下车去天宇看了这场国庆档被吹上了天的电影。实际效果良好，气氛拼不过《缝纫机》，但主题相近，都是体现了对理想的追求，有麻花式的幽默，包袱的细节处理很好。取材虽然有些老套（身体互换），但是艾伦和马丽对角色的理解和表现是很好的，这一点上马丽我觉得做得更好，真正的演的像个男生，一些细节的处理（抖腿，口语等）很用心，让人不易出戏。如果这部戏能给9分的话，演技我给7分，剩下2分就给理想了。<br><em>为信念而努力</em>，也许永不过时，只是会被娱乐化，被媒体，被大众消费。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;2017-10-22&quot;&gt;&lt;a href=&quot;#2017-10-22&quot; class=&quot;headerlink&quot; title=&quot;2017-10-22&quot;&gt;&lt;/a&gt;2017-10-22&lt;/h2&gt;&lt;p&gt;午时返校，中途下车去天宇看了这场国庆档被吹上了天的电影。实际效果良好，气氛拼
+      
+    
+    </summary>
+    
+      <category term="Zzz" scheme="http://vilogy.citvilab.cn/categories/Zzz/"/>
+    
+    
+      <category term="Life" scheme="http://vilogy.citvilab.cn/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>终极</title>
+    <link href="http://vilogy.citvilab.cn/2017/10/19/Essay/%E7%BB%88%E6%9E%81-1/"/>
+    <id>http://vilogy.citvilab.cn/2017/10/19/Essay/终极-1/</id>
+    <published>2017-10-19T10:54:10.000Z</published>
+    <updated>2020-04-17T04:15:12.565Z</updated>
+    
+    <content type="html"><![CDATA[<p>  无论是社会学还是科学，亦或者社会科学，想要掌握终极的智慧都需要付出等量深刻的努力，没有高低，没有捷径</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;  无论是社会学还是科学，亦或者社会科学，想要掌握终极的智慧都需要付出等量深刻的努力，没有高低，没有捷径&lt;/p&gt;
+
+      
+    
+    </summary>
+    
+      <category term="Zzz" scheme="http://vilogy.citvilab.cn/categories/Zzz/"/>
+    
+    
+      <category term="Life" scheme="http://vilogy.citvilab.cn/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>程序思维的转变 - 长歌当啸</title>
+    <link href="http://vilogy.citvilab.cn/2017/05/12/Essay/%E7%A8%8B%E5%BA%8F%E6%80%9D%E7%BB%B4%E7%9A%84%E8%BD%AC%E5%8F%98-%E9%95%BF%E6%AD%8C%E5%BD%93%E5%95%B8/"/>
+    <id>http://vilogy.citvilab.cn/2017/05/12/Essay/程序思维的转变-长歌当啸/</id>
+    <published>2017-05-11T16:06:00.000Z</published>
+    <updated>2017-10-23T06:40:49.198Z</updated>
+    
+    <content type="html"><![CDATA[<p>【摘要】学习不同的程序语言的时候，经常会遇到不同代码风格，语言设计，导致各种各样奇怪的问题。比较明显的区别，比如C语言，与类JAVA语言之间的「巨大」的编程差异。不谈表面上高大上所谓「面向对象」，「面向过程」，仅从今晚遇到的一个小问题还是说起。 晚上想把自己计划中的一个小东西进行一下，js调用高德地图api <a href="http://www.cnblogs.com/vilogy/p/6843541.html" target="_blank" rel="noopener">阅读全文</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;【摘要】学习不同的程序语言的时候，经常会遇到不同代码风格，语言设计，导致各种各样奇怪的问题。比较明显的区别，比如C语言，与类JAVA语言之间的「巨大」的编程差异。不谈表面上高大上所谓「面向对象」，「面向过程」，仅从今晚遇到的一个小问题还是说起。 晚上想把自己计划中的一个小东
+      
+    
+    </summary>
+    
+    
+      <category term="生活" scheme="http://vilogy.citvilab.cn/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于当下的思考</title>
+    <link href="http://vilogy.citvilab.cn/2017/04/27/Essay/%E5%9F%BA%E4%BA%8E%E5%BD%93%E4%B8%8B%E7%9A%84%E6%80%9D%E8%80%83/"/>
+    <id>http://vilogy.citvilab.cn/2017/04/27/Essay/基于当下的思考/</id>
+    <published>2017-04-26T16:00:00.000Z</published>
+    <updated>2020-04-17T04:12:49.629Z</updated>
+    
+    <content type="html"><![CDATA[<p>【摘要】马德，说好的技术blog，变成日记本了。。。 下午的时候莫名其妙的感到很颓废，因为自己的不够强大感到忧虑和危机感十足。现在每每行走在技术的道路上，常觉得如履薄冰，如芒在背。 上大学之前和现在的心态其实差别挺大的，视野的开阔远远不止局限于自己的脚下。不过，这里的「上大学之前」只是一个时间描述词，并不觉 <a href="http://www.cnblogs.com/vilogy/p/6771684.html" target="_blank" rel="noopener">阅读全文</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;【摘要】马德，说好的技术blog，变成日记本了。。。 下午的时候莫名其妙的感到很颓废，因为自己的不够强大感到忧虑和危机感十足。现在每每行走在技术的道路上，常觉得如履薄冰，如芒在背。 上大学之前和现在的心态其实差别挺大的，视野的开阔远远不止局限于自己的脚下。不过，这里的「上大
+      
+    
+    </summary>
+    
+      <category term="Zzz" scheme="http://vilogy.citvilab.cn/categories/Zzz/"/>
+    
+    
+      <category term="Life" scheme="http://vilogy.citvilab.cn/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[随笔]什么是核心技术？ - 长歌当啸</title>
+    <link href="http://vilogy.citvilab.cn/2017/04/23/Essay/%E9%9A%8F%E7%AC%94-%E4%BB%80%E4%B9%88%E6%98%AF%E6%A0%B8%E5%BF%83%E6%8A%80%E6%9C%AF%EF%BC%9F-%E9%95%BF%E6%AD%8C%E5%BD%93%E5%95%B8/"/>
+    <id>http://vilogy.citvilab.cn/2017/04/23/Essay/随笔-什么是核心技术？-长歌当啸/</id>
+    <published>2017-04-23T00:17:00.000Z</published>
+    <updated>2020-04-17T04:15:41.244Z</updated>
+    
+    <content type="html"><![CDATA[<p>【摘要】也许就是baidu上无法搜索到的，可以直接复制粘贴付诸使用的，所谓「技术」 想的越多，想说的欲望反而越少。 <a href="http://www.cnblogs.com/vilogy/p/6751514.html" target="_blank" rel="noopener">阅读全文</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;【摘要】也许就是baidu上无法搜索到的，可以直接复制粘贴付诸使用的，所谓「技术」 想的越多，想说的欲望反而越少。 &lt;a href=&quot;http://www.cnblogs.com/vilogy/p/6751514.html&quot; target=&quot;_blank&quot; rel=&quot;noo
+      
+    
+    </summary>
+    
+      <category term="Zzz" scheme="http://vilogy.citvilab.cn/categories/Zzz/"/>
+    
+    
+      <category term="Life" scheme="http://vilogy.citvilab.cn/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[随笔]在清明节假期独自思考 - 长歌当啸</title>
+    <link href="http://vilogy.citvilab.cn/2017/04/04/Essay/%E9%9A%8F%E7%AC%94-%E5%9C%A8%E6%B8%85%E6%98%8E%E8%8A%82%E5%81%87%E6%9C%9F%E7%8B%AC%E8%87%AA%E6%80%9D%E8%80%83-%E9%95%BF%E6%AD%8C%E5%BD%93%E5%95%B8/"/>
+    <id>http://vilogy.citvilab.cn/2017/04/04/Essay/随笔-在清明节假期独自思考-长歌当啸/</id>
+    <published>2017-04-03T16:33:00.000Z</published>
+    <updated>2020-04-17T04:15:50.376Z</updated>
+    
+    <content type="html"><![CDATA[<p>【摘要】有时候我们总是以为外界环境错了，其实错在内心。 这个假期有幸能一个人独自在学校，在宿舍，一个人的生活，能让我把精力更多的放在精神层面。所以有时候会不吃饭：） 1.思考了自己与外界的关系 之前有个名词“社会主义巨婴”，老是自诩见多识广，最终也栽在了这个词上。无法处理好与外界的关系是巨婴的一个特点，一个 <a href="http://www.cnblogs.com/vilogy/p/6664168.html" target="_blank" rel="noopener">阅读全文</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;【摘要】有时候我们总是以为外界环境错了，其实错在内心。 这个假期有幸能一个人独自在学校，在宿舍，一个人的生活，能让我把精力更多的放在精神层面。所以有时候会不吃饭：） 1.思考了自己与外界的关系 之前有个名词“社会主义巨婴”，老是自诩见多识广，最终也栽在了这个词上。无法处理好
+      
+    
+    </summary>
+    
+      <category term="Zzz" scheme="http://vilogy.citvilab.cn/categories/Zzz/"/>
+    
+    
+      <category term="Life" scheme="http://vilogy.citvilab.cn/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>[随笔]一些想法w - 长歌当啸</title>
+    <link href="http://vilogy.citvilab.cn/2017/04/03/Essay/%E9%9A%8F%E7%AC%94-%E4%B8%80%E4%BA%9B%E6%83%B3%E6%B3%95w-%E9%95%BF%E6%AD%8C%E5%BD%93%E5%95%B8/"/>
+    <id>http://vilogy.citvilab.cn/2017/04/03/Essay/随笔-一些想法w-长歌当啸/</id>
+    <published>2017-04-02T17:54:00.000Z</published>
+    <updated>2020-04-17T04:15:30.887Z</updated>
+    
+    <content type="html"><![CDATA[<p>【摘要】有句话叫做「人类一思考，上帝就发笑」。嗯，有点道理。 这是站在一种高维的层面上来看待一种低维事件。比如大学生去做小学题目的时候会看到老师为题目设置的种种「陷阱」，不禁露出一种作为小学生做题目绝不可能露出的笑。 但由于我们所处世界的无限性，不存在绝对的高维，也就是说每个人都处在一个隐形的低维层面，都有 <a href="http://www.cnblogs.com/vilogy/p/6660471.html" target="_blank" rel="noopener">阅读全文</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;【摘要】有句话叫做「人类一思考，上帝就发笑」。嗯，有点道理。 这是站在一种高维的层面上来看待一种低维事件。比如大学生去做小学题目的时候会看到老师为题目设置的种种「陷阱」，不禁露出一种作为小学生做题目绝不可能露出的笑。 但由于我们所处世界的无限性，不存在绝对的高维，也就是说每
+      
+    
+    </summary>
+    
+      <category term="Zzz" scheme="http://vilogy.citvilab.cn/categories/Zzz/"/>
+    
+    
+      <category term="Life" scheme="http://vilogy.citvilab.cn/tags/Life/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Hello World</title>
     <link href="http://vilogy.citvilab.cn/2014/10/18/hello-world/"/>
     <id>http://vilogy.citvilab.cn/2014/10/18/hello-world/</id>
@@ -143,52 +514,6 @@
     </summary>
     
       <category term="Test" scheme="http://vilogy.citvilab.cn/categories/Test/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>繁體中文測試</title>
-    <link href="http://vilogy.citvilab.cn/2013/12/25/traditional-chinese-test/"/>
-    <id>http://vilogy.citvilab.cn/2013/12/25/traditional-chinese-test/</id>
-    <published>2013-12-25T13:17:16.000Z</published>
-    <updated>2015-12-16T06:07:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。</p><p>舍利子，色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。</p><p>舍利子，是諸法空相，不生不滅，不垢不淨，不增不減，是故空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明，亦無無明盡；乃至無老死，亦無老死盡。無苦、集、滅、道，無智亦無得，以無所得故。</p><p>菩提薩埵(<code>duǒ</code>)，依般若波羅蜜多故，心無罣礙(<code>guà ài</code>)。無罣礙，故無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛，依般若波羅蜜多故，得阿耨多羅三藐三菩提。<a id="more"></a></p><p>故知般若波羅蜜多，是大神咒，是大明咒，是無上咒，是無等等咒，能除一切苦，真實不虛。</p><p>故說般若波羅蜜多咒，即說咒曰：</p><blockquote><p>揭諦、揭諦，波羅揭諦，波羅僧揭諦，菩提薩婆訶。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;觀自在菩薩，行深般若波羅蜜多時，照見五蘊皆空，度一切苦厄。&lt;/p&gt;
-&lt;p&gt;舍利子，色不異空，空不異色；色即是空，空即是色。受、想、行、識，亦復如是。&lt;/p&gt;
-&lt;p&gt;舍利子，是諸法空相，不生不滅，不垢不淨，不增不減，是故空中無色，無受、想、行、識；無眼、耳、鼻、舌、身、意；無色、聲、香、味、觸、法；無眼界，乃至無意識界；無無明，亦無無明盡；乃至無老死，亦無老死盡。無苦、集、滅、道，無智亦無得，以無所得故。&lt;/p&gt;
-&lt;p&gt;菩提薩埵(&lt;code&gt;duǒ&lt;/code&gt;)，依般若波羅蜜多故，心無罣礙(&lt;code&gt;guà ài&lt;/code&gt;)。無罣礙，故無有恐怖，遠離顛倒夢想，究竟涅槃。三世諸佛，依般若波羅蜜多故，得阿耨多羅三藐三菩提。
-    
-    </summary>
-    
-      <category term="Tests" scheme="http://vilogy.citvilab.cn/categories/Tests/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>简体中文测试</title>
-    <link href="http://vilogy.citvilab.cn/2013/12/25/simplified-chinese-test/"/>
-    <id>http://vilogy.citvilab.cn/2013/12/25/simplified-chinese-test/</id>
-    <published>2013-12-25T12:17:16.000Z</published>
-    <updated>2015-12-16T06:07:33.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。</p><p>舍利子，色不异空，空不异色；色即是空，空即是色。受、想、行、识，亦复如是。</p><p>舍利子，是诸法空相，不生不灭，不垢不净，不增不减，是故空中无色，无受、想、行、识；无眼、耳、鼻、舌、身、意；无色、声、香、味、触、法；无眼界，乃至无意识界；无无明，亦无无明尽；乃至无老死，亦无老死尽。无苦、集、灭、道，无智亦无得，以无所得故。</p><p>菩提萨埵(<code>duǒ</code>)，依般若波罗蜜多故，心无罣碍(<code>guà ài</code>)。无罣碍，故无有恐怖，远离颠倒梦想，究竟涅盘。三世诸佛，依般若波罗蜜多故，得阿耨多罗三藐三菩提。<a id="more"></a></p><p>故知般若波罗蜜多，大神咒，是大明咒，是无上咒，是无等等咒，能除一切苦，真实不虚。</p><p>故说般若波罗蜜多咒， 即说咒曰，</p><blockquote><p>揭谛揭谛 波罗揭谛 波罗僧揭谛 菩提萨婆诃</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;观自在菩萨，行深般若波罗蜜多时，照见五蕴皆空，度一切苦厄。&lt;/p&gt;
-&lt;p&gt;舍利子，色不异空，空不异色；色即是空，空即是色。受、想、行、识，亦复如是。&lt;/p&gt;
-&lt;p&gt;舍利子，是诸法空相，不生不灭，不垢不净，不增不减，是故空中无色，无受、想、行、识；无眼、耳、鼻、舌、身、意；无色、声、香、味、触、法；无眼界，乃至无意识界；无无明，亦无无明尽；乃至无老死，亦无老死尽。无苦、集、灭、道，无智亦无得，以无所得故。&lt;/p&gt;
-&lt;p&gt;菩提萨埵(&lt;code&gt;duǒ&lt;/code&gt;)，依般若波罗蜜多故，心无罣碍(&lt;code&gt;guà ài&lt;/code&gt;)。无罣碍，故无有恐怖，远离颠倒梦想，究竟涅盘。三世诸佛，依般若波罗蜜多故，得阿耨多罗三藐三菩提。
-    
-    </summary>
-    
-      <category term="Tests" scheme="http://vilogy.citvilab.cn/categories/Tests/"/>
     
     
   </entry>
