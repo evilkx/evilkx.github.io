@@ -181,42 +181,6 @@
   
   <entry>
     <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/OpenCV/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/OpenCV/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:04:32.817Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="OpenCV" scheme="http://vilogy.citvilab.cn/categories/OpenCV/"/>
-    
-    
-      <category term="OpenCV" scheme="http://vilogy.citvilab.cn/tags/OpenCV/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/C/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/C/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:02:25.645Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="C" scheme="http://vilogy.citvilab.cn/categories/C/"/>
-    
-    
-      <category term="C" scheme="http://vilogy.citvilab.cn/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
     <link href="http://vilogy.citvilab.cn/2020/04/17/Python/test/"/>
     <id>http://vilogy.citvilab.cn/2020/04/17/Python/test/</id>
     <published>2020-04-17T04:58:58.000Z</published>
@@ -230,150 +194,6 @@
     
     
       <category term="Python" scheme="http://vilogy.citvilab.cn/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/Linux/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/Linux/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:04:09.146Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://vilogy.citvilab.cn/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://vilogy.citvilab.cn/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/K210/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/K210/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:01:35.015Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="K210" scheme="http://vilogy.citvilab.cn/categories/K210/"/>
-    
-    
-      <category term="K210" scheme="http://vilogy.citvilab.cn/tags/K210/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/Arduino/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/Arduino/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:01:04.385Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="Arduino" scheme="http://vilogy.citvilab.cn/categories/Arduino/"/>
-    
-    
-      <category term="Arduino" scheme="http://vilogy.citvilab.cn/tags/Arduino/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/C++/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/C++/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:02:45.376Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="C++" scheme="http://vilogy.citvilab.cn/categories/C/"/>
-    
-    
-      <category term="C++" scheme="http://vilogy.citvilab.cn/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/RaspberryPi/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/RaspberryPi/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:00:29.673Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="RaspberryPi" scheme="http://vilogy.citvilab.cn/categories/RaspberryPi/"/>
-    
-    
-      <category term="RaspberryPi" scheme="http://vilogy.citvilab.cn/tags/RaspberryPi/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/BCI/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/BCI/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:02:06.075Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="BCI" scheme="http://vilogy.citvilab.cn/categories/BCI/"/>
-    
-    
-      <category term="BCI" scheme="http://vilogy.citvilab.cn/tags/BCI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/CyberSecurity/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/CyberSecurity/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:03:34.552Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="CyberSecurity" scheme="http://vilogy.citvilab.cn/categories/CyberSecurity/"/>
-    
-    
-      <category term="CyberSecurity" scheme="http://vilogy.citvilab.cn/tags/CyberSecurity/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/Git/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/Git/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:03:52.351Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="Git" scheme="http://vilogy.citvilab.cn/categories/Git/"/>
-    
-    
-      <category term="Git" scheme="http://vilogy.citvilab.cn/tags/Git/"/>
     
   </entry>
   
@@ -397,6 +217,168 @@
   
   <entry>
     <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/Linux/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/Linux/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:04:09.146Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Linux" scheme="http://vilogy.citvilab.cn/categories/Linux/"/>
+    
+    
+      <category term="Linux" scheme="http://vilogy.citvilab.cn/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/OpenCV/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/OpenCV/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:04:32.817Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="OpenCV" scheme="http://vilogy.citvilab.cn/categories/OpenCV/"/>
+    
+    
+      <category term="OpenCV" scheme="http://vilogy.citvilab.cn/tags/OpenCV/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/RaspberryPi/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/RaspberryPi/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:00:29.673Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="RaspberryPi" scheme="http://vilogy.citvilab.cn/categories/RaspberryPi/"/>
+    
+    
+      <category term="RaspberryPi" scheme="http://vilogy.citvilab.cn/tags/RaspberryPi/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/Arduino/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/Arduino/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:01:04.385Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Arduino" scheme="http://vilogy.citvilab.cn/categories/Arduino/"/>
+    
+    
+      <category term="Arduino" scheme="http://vilogy.citvilab.cn/tags/Arduino/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/BCI/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/BCI/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:02:06.075Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="BCI" scheme="http://vilogy.citvilab.cn/categories/BCI/"/>
+    
+    
+      <category term="BCI" scheme="http://vilogy.citvilab.cn/tags/BCI/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/K210/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/K210/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:01:35.015Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="K210" scheme="http://vilogy.citvilab.cn/categories/K210/"/>
+    
+    
+      <category term="K210" scheme="http://vilogy.citvilab.cn/tags/K210/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/C++/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/C++/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:02:45.376Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="C++" scheme="http://vilogy.citvilab.cn/categories/C/"/>
+    
+    
+      <category term="C++" scheme="http://vilogy.citvilab.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/C/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/C/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:02:25.645Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="C" scheme="http://vilogy.citvilab.cn/categories/C/"/>
+    
+    
+      <category term="C" scheme="http://vilogy.citvilab.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/CyberSecurity/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/CyberSecurity/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:03:34.552Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="CyberSecurity" scheme="http://vilogy.citvilab.cn/categories/CyberSecurity/"/>
+    
+    
+      <category term="CyberSecurity" scheme="http://vilogy.citvilab.cn/tags/CyberSecurity/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
     <link href="http://vilogy.citvilab.cn/2020/04/17/CVM/test/"/>
     <id>http://vilogy.citvilab.cn/2020/04/17/CVM/test/</id>
     <published>2020-04-17T04:58:58.000Z</published>
@@ -410,6 +392,24 @@
     
     
       <category term="CVM" scheme="http://vilogy.citvilab.cn/tags/CVM/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/Git/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/Git/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:03:52.351Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Git" scheme="http://vilogy.citvilab.cn/categories/Git/"/>
+    
+    
+      <category term="Git" scheme="http://vilogy.citvilab.cn/tags/Git/"/>
     
   </entry>
   

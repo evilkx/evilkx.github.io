@@ -180,56 +180,6 @@
     
     <entry>
       <title>test</title>
-      <link href="/2020/04/17/OpenCV/test/"/>
-      <url>/2020/04/17/OpenCV/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> OpenCV </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> OpenCV </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/C/test/"/>
-      <url>/2020/04/17/C/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> C </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> C </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
       <link href="/2020/04/17/Python/test/"/>
       <url>/2020/04/17/Python/test/</url>
       
@@ -246,206 +196,6 @@
         <tags>
             
             <tag> Python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/Linux/test/"/>
-      <url>/2020/04/17/Linux/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> Linux </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Linux </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/K210/test/"/>
-      <url>/2020/04/17/K210/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> K210 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> K210 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/Arduino/test/"/>
-      <url>/2020/04/17/Arduino/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> Arduino </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Arduino </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/C++/test/"/>
-      <url>/2020/04/17/C++/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> C++ </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> C++ </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/RaspberryPi/test/"/>
-      <url>/2020/04/17/RaspberryPi/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> RaspberryPi </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> RaspberryPi </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/BCI/test/"/>
-      <url>/2020/04/17/BCI/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> BCI </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> BCI </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/CyberSecurity/test/"/>
-      <url>/2020/04/17/CyberSecurity/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> CyberSecurity </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> CyberSecurity </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/Git/test/"/>
-      <url>/2020/04/17/Git/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> Git </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Git </tag>
             
         </tags>
       
@@ -480,6 +230,231 @@
     
     <entry>
       <title>test</title>
+      <link href="/2020/04/17/Linux/test/"/>
+      <url>/2020/04/17/Linux/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Linux </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Linux </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/OpenCV/test/"/>
+      <url>/2020/04/17/OpenCV/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> OpenCV </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/RaspberryPi/test/"/>
+      <url>/2020/04/17/RaspberryPi/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> RaspberryPi </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> RaspberryPi </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/Arduino/test/"/>
+      <url>/2020/04/17/Arduino/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Arduino </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Arduino </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/BCI/test/"/>
+      <url>/2020/04/17/BCI/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> BCI </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> BCI </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/K210/test/"/>
+      <url>/2020/04/17/K210/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> K210 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> K210 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/C++/test/"/>
+      <url>/2020/04/17/C++/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> C++ </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/C/test/"/>
+      <url>/2020/04/17/C/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> C </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/CyberSecurity/test/"/>
+      <url>/2020/04/17/CyberSecurity/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> CyberSecurity </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CyberSecurity </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
       <link href="/2020/04/17/CVM/test/"/>
       <url>/2020/04/17/CVM/test/</url>
       
@@ -496,6 +471,31 @@
         <tags>
             
             <tag> CVM </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/Git/test/"/>
+      <url>/2020/04/17/Git/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> Git </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Git </tag>
             
         </tags>
       
