@@ -63,7 +63,7 @@
 <p>A*搜索算法的演示图：</p>
 <p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\Astar_progress_animation.gif" alt="Astar_progress_animation"></p>
 <h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>以一个简单的寻路场景为例</p>
-<p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\640.png" alt="640" style="zoom: 67%;"></p>
+<p><img src="https://evilkx.github.io/images/typora_srcs/SearchAlgorithm/640.png" alt="640" style="zoom: 67%;"></p>
 <p>游戏场景是7x5大小的迷宫，由小方格组成，绿格是起点，红格是终点，中间三个蓝色格子代表墙。</p>
 <p>游戏规则是从起点开始，每一步只能向上下左右移动一格，且不能穿越墙壁。如何用最少的步数到达终点？</p>
 <hr>
@@ -75,7 +75,7 @@
 <li>找出OpenList中F值最小的方格，即唯一方格Node(1, 2)作为当前方格，并把当前格移出OpenList，放入CloseList。代表这个格子已经到达并检查过了。</li>
 <li>找出当前格上下左右所有可到达的格子，看它们是否在OpenList当中。如果不在，加入OpenList，计算出相应的G、H、F值，并把当前格子作为它们的“父节点”。</li>
 </ol>
-<p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\A-star-round1.png" alt="A-star-round1" style="zoom: 67%;"></p>
+<p><img src="https://evilkx.github.io/images/typora_srcs/SearchAlgorithm/A-star-round1.png" alt="A-star-round1" style="zoom: 67%;"></p>
 <p><strong>图中，每个格子的左下方数字是G，右下方是H，左上方是F。</strong></p>
 <h4 id="多次局部搜索"><a href="#多次局部搜索" class="headerlink" title="多次局部搜索"></a>多次局部搜索</h4><p>继续重复局部搜索的步骤，直到找到终点为止。</p>
 <ol>
@@ -85,7 +85,7 @@
 <p>……</p>
 <p>当终点方格出现在OpenList中，寻路结束。</p>
 <p>终点方格–&gt;父节点–&gt;父父节点–&gt;…–&gt;起点，如此回溯便能得到一条路径。（格上数字表示F）    </p>
-<p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\A-star-end.png" alt="A-star-end" style="zoom:67%;"></p>
+<p><img src="https://evilkx.github.io/images/typora_srcs/SearchAlgorithm/A-star-end.png" alt="A-star-end" style="zoom:67%;"></p>
 </li>
 </ol>
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>伪代码</p>
