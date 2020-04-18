@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://vilogy.citvilab.cn/"/>
-  <updated>2020-04-17T15:04:04.714Z</updated>
+  <updated>2020-04-18T01:39:35.785Z</updated>
   <id>http://vilogy.citvilab.cn/</id>
   
   <author>
@@ -17,13 +17,81 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Dijkstra算法</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/18/Dijkstra%E7%AE%97%E6%B3%95/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/18/Dijkstra算法/</id>
+    <published>2020-04-18T01:39:01.000Z</published>
+    <updated>2020-04-18T01:39:35.785Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://vilogy.citvilab.cn/categories/Algorithm/"/>
+    
+    
+      <category term="Dijkstra" scheme="http://vilogy.citvilab.cn/tags/Dijkstra/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>遗传算法</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/18/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/18/遗传算法/</id>
+    <published>2020-04-18T01:38:29.000Z</published>
+    <updated>2020-04-18T01:40:07.565Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://vilogy.citvilab.cn/categories/Algorithm/"/>
+    
+    
+      <category term="遗传算法" scheme="http://vilogy.citvilab.cn/tags/%E9%81%97%E4%BC%A0%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
     <title>A*Search</title>
     <link href="http://vilogy.citvilab.cn/2020/04/17/A-Search/"/>
     <id>http://vilogy.citvilab.cn/2020/04/17/A-Search/</id>
     <published>2020-04-17T14:50:50.000Z</published>
-    <updated>2020-04-17T15:04:04.714Z</updated>
+    <updated>2020-04-18T01:41:01.672Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="A-搜索算法（A-star-Search）"><a href="#A-搜索算法（A-star-Search）" class="headerlink" title="A*搜索算法（A-star Search）"></a>A*搜索算法（A-star Search）</h2><h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>A<em>搜索算法是一种在图形平面上，有多个节点的路径，求出最低通过成本的算法，一种用于寻找有效路径的算法。常用于游戏中NPC的移动计算，或网络游戏的BOT的移动计算上。这种以估值来决定搜索优先级的方式，也成为<em>*启发式搜索</em></em>。</p><p>该算法综合最良优先搜索和<a href="https://zh.wikipedia.org/wiki/Dijkstra算法" target="_blank" rel="noopener">Dijkstra算法</a>的优点：在进行启发式搜索提高算法效率的同时，可以保证找到一条最优路径（基于评估函数）。</p><p>A*搜索算法的演示图：</p><p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\Astar_progress_animation.gif" alt="Astar_progress_animation"></p><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>以一个简单的寻路场景为例</p><p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\640.png" alt="640" style="zoom: 67%;"></p><p>游戏场景是7x5大小的迷宫，由小方格组成，绿格是起点，红格是终点，中间三个蓝色格子代表墙。</p><p>游戏规则是从起点开始，每一步只能向上下左右移动一格，且不能穿越墙壁。如何用最少的步数到达终点？</p><hr><p>引入两个集合和一个公式：<br>$$<br>[OpenList], [CloseList], F = G + H<br>$$<br>OpenList和CloseList都是存储格子的集合，其中OpenList存储可到达的格子，CloseList存储已到达的格子。</p><p>公式 F = G + H 是对格子价值的评估。其中<strong>G</strong>代表从起点到当前格的成本，也就是走了多少步。<strong>H</strong>代表从当前格走到目标格的距离，也就是不考虑障碍的情况下，离目标还有多远。<strong>F</strong>则是对G和H的综合评估。显然我们应尽量选择步数少，离目标更近的格子。所以<strong>F</strong>的值越小越好。</p><hr><h4 id="一次局部搜索"><a href="#一次局部搜索" class="headerlink" title="一次局部搜索"></a>一次局部搜索</h4><ol><li>将起点Node(1, 2)放入OpenList</li><li>找出OpenList中F值最小的方格，即唯一方格Node(1, 2)作为当前方格，并把当前格移出OpenList，放入CloseList。代表这个格子已经到达并检查过了。</li><li>找出当前格上下左右所有可到达的格子，看它们是否在OpenList当中。如果不在，加入OpenList，计算出相应的G、H、F值，并把当前格子作为它们的“父节点”。</li></ol><p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\A-star-round1.png" alt="A-star-round1" style="zoom: 67%;"></p><p><strong>图中，每个格子的左下方数字是G，右下方是H，左上方是F。</strong></p><h4 id="多次局部搜索"><a href="#多次局部搜索" class="headerlink" title="多次局部搜索"></a>多次局部搜索</h4><p>继续重复局部搜索的步骤，直到找到终点为止。</p><ol><li><p>找出OpenList中F值最小的方格点，即Node(2, 2)作为当前方格，并把当前格移出OpenList，放入CloseList。代表这个格子已经到达并检查过了。</p></li><li><p>找出当前格上下左右所有可到达的格子，看它们是否在OpenList当中。如果不在，加入OpenList，计算出相应的G、H、F值，并把当前格子作为它们的“父节点”。</p><p>……</p><p>当终点方格出现在OpenList中，寻路结束。</p><p>终点方格–&gt;父节点–&gt;父父节点–&gt;…–&gt;起点，如此回溯便能得到一条路径。（格上数字表示F）    </p><p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\A-star-end.png" alt="A-star-end" style="zoom:67%;"></p></li></ol><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>伪代码</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Node <span class="title">aStarSearch</span><span class="params">(Node start, Node end)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 把起点加入 open list  </span></span><br><span class="line">    openList.add(start);</span><br><span class="line">    <span class="comment">//主循环，每一轮检查一个当前方格节点</span></span><br><span class="line">    <span class="keyword">while</span> (openList.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 在OpenList中查找 F值最小的节点作为当前方格节点</span></span><br><span class="line">        Node current = findMinNode();</span><br><span class="line">        <span class="comment">// 当前方格节点从open list中移除</span></span><br><span class="line">        openList.remove(current);</span><br><span class="line">        <span class="comment">// 当前方格节点进入 close list</span></span><br><span class="line">        closeList.add(current);</span><br><span class="line">        <span class="comment">// 找到所有邻近节点</span></span><br><span class="line">        List&lt;Node&gt; neighbors = findNeighbors(current);</span><br><span class="line">        <span class="keyword">for</span> (Node node : neighbors) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!openList.contains(node)) &#123;</span><br><span class="line">                <span class="comment">//邻近节点不在OpenList中，标记父亲、G、H、F，并放入OpenList</span></span><br><span class="line">                markAndInvolve(current, end, node);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//如果终点在OpenList中，直接返回终点格子</span></span><br><span class="line">        <span class="keyword">if</span> (find(openList, end) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> find(openList, end);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//OpenList用尽，仍然找不到终点，说明终点不可到达，返回空</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
     
     <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;A-搜索算法（A-star-Search）&quot;&gt;&lt;a href=&quot;#A-搜索算法（A-star-Search）&quot; class=&quot;headerlink&quot; title=&quot;A*搜索算法（A-star Search）&quot;&gt;&lt;/a&gt;A*搜索算法（A-star Search）&lt;/
+      
+    
+    </summary>
+    
+      <category term="Algorithm" scheme="http://vilogy.citvilab.cn/categories/Algorithm/"/>
+    
+    
+      <category term="A-star" scheme="http://vilogy.citvilab.cn/tags/A-star/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>A*Search</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/Algorithm/A-Search/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/Algorithm/A-Search/</id>
+    <published>2020-04-17T14:50:50.000Z</published>
+    <updated>2020-04-18T01:36:27.454Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="A-搜索算法（A-star-Search）"><a href="#A-搜索算法（A-star-Search）" class="headerlink" title="A*搜索算法（A-star Search）"></a>A*搜索算法（A-star Search）</h2><h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>A<em>搜索算法是一种在图形平面上，有多个节点的路径，求出最低通过成本的算法，一种用于寻找有效路径的算法。常用于游戏中NPC的移动计算，或网络游戏的BOT的移动计算上。这种以估值来决定搜索优先级的方式，也成为<em>*启发式搜索</em></em>。</p><p>该算法综合最良优先搜索和<a href="https://zh.wikipedia.org/wiki/Dijkstra算法" target="_blank" rel="noopener">Dijkstra算法</a>的优点：在进行启发式搜索提高算法效率的同时，可以保证找到一条最优路径（基于评估函数）。</p><p>A*搜索算法的演示图：</p><p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\Astar_progress_animation.gif" alt="Astar_progress_animation"></p><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>以一个简单的寻路场景为例</p><p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\640.png" alt="640" style="zoom: 67%;"></p><p>游戏场景是7x5大小的迷宫，由小方格组成，绿格是起点，红格是终点，中间三个蓝色格子代表墙。</p><p>游戏规则是从起点开始，每一步只能向上下左右移动一格，且不能穿越墙壁。如何用最少的步数到达终点？</p><hr><p>引入两个集合和一个公式：<br>$$<br>[OpenList], [CloseList], F = G + H<br>$$<br>OpenList和CloseList都是存储格子的集合，其中OpenList存储可到达的格子，CloseList存储已到达的格子。</p><p>公式 F = G + H 是对格子价值的评估。其中<strong>G</strong>代表从起点到当前格的成本，也就是走了多少步。<strong>H</strong>代表从当前格走到目标格的距离，也就是不考虑障碍的情况下，离目标还有多远。<strong>F</strong>则是对G和H的综合评估。显然我们应尽量选择步数少，离目标更近的格子。所以<strong>F</strong>的值越小越好。</p><hr><h4 id="一次局部搜索"><a href="#一次局部搜索" class="headerlink" title="一次局部搜索"></a>一次局部搜索</h4><ol><li>将起点Node(1, 2)放入OpenList</li><li>找出OpenList中F值最小的方格，即唯一方格Node(1, 2)作为当前方格，并把当前格移出OpenList，放入CloseList。代表这个格子已经到达并检查过了。</li><li>找出当前格上下左右所有可到达的格子，看它们是否在OpenList当中。如果不在，加入OpenList，计算出相应的G、H、F值，并把当前格子作为它们的“父节点”。</li></ol><p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\A-star-round1.png" alt="A-star-round1" style="zoom: 67%;"></p><p><strong>图中，每个格子的左下方数字是G，右下方是H，左上方是F。</strong></p><h4 id="多次局部搜索"><a href="#多次局部搜索" class="headerlink" title="多次局部搜索"></a>多次局部搜索</h4><p>继续重复局部搜索的步骤，直到找到终点为止。</p><ol><li><p>找出OpenList中F值最小的方格点，即Node(2, 2)作为当前方格，并把当前格移出OpenList，放入CloseList。代表这个格子已经到达并检查过了。</p></li><li><p>找出当前格上下左右所有可到达的格子，看它们是否在OpenList当中。如果不在，加入OpenList，计算出相应的G、H、F值，并把当前格子作为它们的“父节点”。</p><p>……</p><p>当终点方格出现在OpenList中，寻路结束。</p><p>终点方格–&gt;父节点–&gt;父父节点–&gt;…–&gt;起点，如此回溯便能得到一条路径。（格上数字表示F）    </p><p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\A-star-end.png" alt="A-star-end" style="zoom:67%;"></p></li></ol><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>伪代码</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Node <span class="title">aStarSearch</span><span class="params">(Node start, Node end)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 把起点加入 open list  </span></span><br><span class="line">    openList.add(start);</span><br><span class="line">    <span class="comment">//主循环，每一轮检查一个当前方格节点</span></span><br><span class="line">    <span class="keyword">while</span> (openList.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 在OpenList中查找 F值最小的节点作为当前方格节点</span></span><br><span class="line">        Node current = findMinNode();</span><br><span class="line">        <span class="comment">// 当前方格节点从open list中移除</span></span><br><span class="line">        openList.remove(current);</span><br><span class="line">        <span class="comment">// 当前方格节点进入 close list</span></span><br><span class="line">        closeList.add(current);</span><br><span class="line">        <span class="comment">// 找到所有邻近节点</span></span><br><span class="line">        List&lt;Node&gt; neighbors = findNeighbors(current);</span><br><span class="line">        <span class="keyword">for</span> (Node node : neighbors) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!openList.contains(node)) &#123;</span><br><span class="line">                <span class="comment">//邻近节点不在OpenList中，标记父亲、G、H、F，并放入OpenList</span></span><br><span class="line">                markAndInvolve(current, end, node);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//如果终点在OpenList中，直接返回终点格子</span></span><br><span class="line">        <span class="keyword">if</span> (find(openList, end) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> find(openList, end);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//OpenList用尽，仍然找不到终点，说明终点不可到达，返回空</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h2 id=&quot;A-搜索算法（A-star-Search）&quot;&gt;&lt;a href=&quot;#A-搜索算法（A-star-Search）&quot; class=&quot;headerlink&quot; title=&quot;A*搜索算法（A-star Search）&quot;&gt;&lt;/a&gt;A*搜索算法（A-star Search）&lt;/
+      
     
     </summary>
     
@@ -138,37 +206,19 @@
   
   <entry>
     <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/BCI/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/BCI/test/</id>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/RaspberryPi/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/RaspberryPi/test/</id>
     <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:02:06.075Z</updated>
+    <updated>2020-04-17T05:00:29.673Z</updated>
     
     <summary type="html">
     
     </summary>
     
-      <category term="BCI" scheme="http://vilogy.citvilab.cn/categories/BCI/"/>
+      <category term="RaspberryPi" scheme="http://vilogy.citvilab.cn/categories/RaspberryPi/"/>
     
     
-      <category term="BCI" scheme="http://vilogy.citvilab.cn/tags/BCI/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/Git/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/Git/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:03:52.351Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="Git" scheme="http://vilogy.citvilab.cn/categories/Git/"/>
-    
-    
-      <category term="Git" scheme="http://vilogy.citvilab.cn/tags/Git/"/>
+      <category term="RaspberryPi" scheme="http://vilogy.citvilab.cn/tags/RaspberryPi/"/>
     
   </entry>
   
@@ -192,114 +242,6 @@
   
   <entry>
     <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/Python/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/Python/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:05:25.053Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="Python" scheme="http://vilogy.citvilab.cn/categories/Python/"/>
-    
-    
-      <category term="Python" scheme="http://vilogy.citvilab.cn/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/RaspberryPi/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/RaspberryPi/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:00:29.673Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="RaspberryPi" scheme="http://vilogy.citvilab.cn/categories/RaspberryPi/"/>
-    
-    
-      <category term="RaspberryPi" scheme="http://vilogy.citvilab.cn/tags/RaspberryPi/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/OpenCV/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/OpenCV/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:04:32.817Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="OpenCV" scheme="http://vilogy.citvilab.cn/categories/OpenCV/"/>
-    
-    
-      <category term="OpenCV" scheme="http://vilogy.citvilab.cn/tags/OpenCV/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/C++/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/C++/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:02:45.376Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="C++" scheme="http://vilogy.citvilab.cn/categories/C/"/>
-    
-    
-      <category term="C++" scheme="http://vilogy.citvilab.cn/tags/C/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/K210/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/K210/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:01:35.015Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="K210" scheme="http://vilogy.citvilab.cn/categories/K210/"/>
-    
-    
-      <category term="K210" scheme="http://vilogy.citvilab.cn/tags/K210/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/Linux/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/Linux/test/</id>
-    <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:04:09.146Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-      <category term="Linux" scheme="http://vilogy.citvilab.cn/categories/Linux/"/>
-    
-    
-      <category term="Linux" scheme="http://vilogy.citvilab.cn/tags/Linux/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
     <link href="http://vilogy.citvilab.cn/2020/04/17/Arduino/test/"/>
     <id>http://vilogy.citvilab.cn/2020/04/17/Arduino/test/</id>
     <published>2020-04-17T04:58:58.000Z</published>
@@ -318,19 +260,19 @@
   
   <entry>
     <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/C/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/C/test/</id>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/CVM/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/CVM/test/</id>
     <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:02:25.645Z</updated>
+    <updated>2020-04-17T05:03:01.993Z</updated>
     
     <summary type="html">
     
     </summary>
     
-      <category term="C" scheme="http://vilogy.citvilab.cn/categories/C/"/>
+      <category term="CVM" scheme="http://vilogy.citvilab.cn/categories/CVM/"/>
     
     
-      <category term="C" scheme="http://vilogy.citvilab.cn/tags/C/"/>
+      <category term="CVM" scheme="http://vilogy.citvilab.cn/tags/CVM/"/>
     
   </entry>
   
@@ -354,71 +296,127 @@
   
   <entry>
     <title>test</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/CVM/test/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/CVM/test/</id>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/C++/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/C++/test/</id>
     <published>2020-04-17T04:58:58.000Z</published>
-    <updated>2020-04-17T05:03:01.993Z</updated>
+    <updated>2020-04-17T05:02:45.376Z</updated>
     
     <summary type="html">
     
     </summary>
     
-      <category term="CVM" scheme="http://vilogy.citvilab.cn/categories/CVM/"/>
+      <category term="C++" scheme="http://vilogy.citvilab.cn/categories/C/"/>
     
     
-      <category term="CVM" scheme="http://vilogy.citvilab.cn/tags/CVM/"/>
+      <category term="C++" scheme="http://vilogy.citvilab.cn/tags/C/"/>
     
   </entry>
   
   <entry>
-    <title>排序</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/Algorithm/%E6%8E%92%E5%BA%8F/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/Algorithm/排序/</id>
-    <published>2020-04-17T03:09:34.000Z</published>
-    <updated>2020-04-17T04:07:47.344Z</updated>
-    
-    <content type="html"><![CDATA[<p>排序</p>]]></content>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/BCI/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/BCI/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:02:06.075Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;排序&lt;/p&gt;
-
-      
-    
     </summary>
     
-      <category term="Algorithm" scheme="http://vilogy.citvilab.cn/categories/Algorithm/"/>
+      <category term="BCI" scheme="http://vilogy.citvilab.cn/categories/BCI/"/>
     
     
-      <category term="排序" scheme="http://vilogy.citvilab.cn/tags/%E6%8E%92%E5%BA%8F/"/>
+      <category term="BCI" scheme="http://vilogy.citvilab.cn/tags/BCI/"/>
     
   </entry>
   
   <entry>
-    <title>数据结构</title>
-    <link href="http://vilogy.citvilab.cn/2020/04/17/Algorithm/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
-    <id>http://vilogy.citvilab.cn/2020/04/17/Algorithm/数据结构/</id>
-    <published>2020-04-17T03:08:44.000Z</published>
-    <updated>2020-04-17T04:07:52.340Z</updated>
-    
-    <content type="html"><![CDATA[<p>排序</p>]]></content>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/C/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/C/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:02:25.645Z</updated>
     
     <summary type="html">
     
-      
-      
-        &lt;p&gt;排序&lt;/p&gt;
-
-      
+    </summary>
+    
+      <category term="C" scheme="http://vilogy.citvilab.cn/categories/C/"/>
+    
+    
+      <category term="C" scheme="http://vilogy.citvilab.cn/tags/C/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/Linux/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/Linux/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:04:09.146Z</updated>
+    
+    <summary type="html">
     
     </summary>
     
-      <category term="Algorithm" scheme="http://vilogy.citvilab.cn/categories/Algorithm/"/>
+      <category term="Linux" scheme="http://vilogy.citvilab.cn/categories/Linux/"/>
     
     
-      <category term="数据结构" scheme="http://vilogy.citvilab.cn/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+      <category term="Linux" scheme="http://vilogy.citvilab.cn/tags/Linux/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/K210/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/K210/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:01:35.015Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="K210" scheme="http://vilogy.citvilab.cn/categories/K210/"/>
+    
+    
+      <category term="K210" scheme="http://vilogy.citvilab.cn/tags/K210/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/OpenCV/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/OpenCV/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:04:32.817Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="OpenCV" scheme="http://vilogy.citvilab.cn/categories/OpenCV/"/>
+    
+    
+      <category term="OpenCV" scheme="http://vilogy.citvilab.cn/tags/OpenCV/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>test</title>
+    <link href="http://vilogy.citvilab.cn/2020/04/17/Python/test/"/>
+    <id>http://vilogy.citvilab.cn/2020/04/17/Python/test/</id>
+    <published>2020-04-17T04:58:58.000Z</published>
+    <updated>2020-04-17T05:05:25.053Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="Python" scheme="http://vilogy.citvilab.cn/categories/Python/"/>
+    
+    
+      <category term="Python" scheme="http://vilogy.citvilab.cn/tags/Python/"/>
     
   </entry>
   
