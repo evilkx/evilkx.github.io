@@ -55,35 +55,10 @@
     
     <entry>
       <title>A*Search</title>
-      <link href="/2020/04/17/A-Search/"/>
-      <url>/2020/04/17/A-Search/</url>
-      
-        <content type="html"><![CDATA[<h2 id="A-搜索算法（A-star-Search）"><a href="#A-搜索算法（A-star-Search）" class="headerlink" title="A*搜索算法（A-star Search）"></a>A*搜索算法（A-star Search）</h2><h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>A<em>搜索算法是一种在图形平面上，有多个节点的路径，求出最低通过成本的算法，一种用于寻找有效路径的算法。常用于游戏中NPC的移动计算，或网络游戏的BOT的移动计算上。这种以估值来决定搜索优先级的方式，也成为<em>*启发式搜索</em></em>。</p><p>该算法综合最良优先搜索和<a href="https://zh.wikipedia.org/wiki/Dijkstra算法" target="_blank" rel="noopener">Dijkstra算法</a>的优点：在进行启发式搜索提高算法效率的同时，可以保证找到一条最优路径（基于评估函数）。</p><p>A*搜索算法的演示图：</p><p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\Astar_progress_animation.gif" alt="Astar_progress_animation"></p><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>以一个简单的寻路场景为例</p><p><img src="https://evilkx.github.io/images/typora_srcs/SearchAlgorithm/640.png" alt="640" style="zoom: 67%;"></p><p>游戏场景是7x5大小的迷宫，由小方格组成，绿格是起点，红格是终点，中间三个蓝色格子代表墙。</p><p>游戏规则是从起点开始，每一步只能向上下左右移动一格，且不能穿越墙壁。如何用最少的步数到达终点？</p><hr><p>引入两个集合和一个公式：<br>$$<br>[OpenList], [CloseList], F = G + H<br>$$<br>OpenList和CloseList都是存储格子的集合，其中OpenList存储可到达的格子，CloseList存储已到达的格子。</p><p>公式 F = G + H 是对格子价值的评估。其中<strong>G</strong>代表从起点到当前格的成本，也就是走了多少步。<strong>H</strong>代表从当前格走到目标格的距离，也就是不考虑障碍的情况下，离目标还有多远。<strong>F</strong>则是对G和H的综合评估。显然我们应尽量选择步数少，离目标更近的格子。所以<strong>F</strong>的值越小越好。</p><hr><h4 id="一次局部搜索"><a href="#一次局部搜索" class="headerlink" title="一次局部搜索"></a>一次局部搜索</h4><ol><li>将起点Node(1, 2)放入OpenList</li><li>找出OpenList中F值最小的方格，即唯一方格Node(1, 2)作为当前方格，并把当前格移出OpenList，放入CloseList。代表这个格子已经到达并检查过了。</li><li>找出当前格上下左右所有可到达的格子，看它们是否在OpenList当中。如果不在，加入OpenList，计算出相应的G、H、F值，并把当前格子作为它们的“父节点”。</li></ol><p><img src="https://evilkx.github.io/images/typora_srcs/SearchAlgorithm/A-star-round1.png" alt="A-star-round1" style="zoom: 67%;"></p><p><strong>图中，每个格子的左下方数字是G，右下方是H，左上方是F。</strong></p><h4 id="多次局部搜索"><a href="#多次局部搜索" class="headerlink" title="多次局部搜索"></a>多次局部搜索</h4><p>继续重复局部搜索的步骤，直到找到终点为止。</p><ol><li><p>找出OpenList中F值最小的方格点，即Node(2, 2)作为当前方格，并把当前格移出OpenList，放入CloseList。代表这个格子已经到达并检查过了。</p></li><li><p>找出当前格上下左右所有可到达的格子，看它们是否在OpenList当中。如果不在，加入OpenList，计算出相应的G、H、F值，并把当前格子作为它们的“父节点”。</p><p>……</p><p>当终点方格出现在OpenList中，寻路结束。</p><p>终点方格–&gt;父节点–&gt;父父节点–&gt;…–&gt;起点，如此回溯便能得到一条路径。（格上数字表示F）    </p><p><img src="https://evilkx.github.io/images/typora_srcs/SearchAlgorithm/A-star-end.png" alt="A-star-end" style="zoom:67%;"></p></li></ol><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>伪代码</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Node <span class="title">aStarSearch</span><span class="params">(Node start, Node end)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 把起点加入 open list  </span></span><br><span class="line">    openList.add(start);</span><br><span class="line">    <span class="comment">//主循环，每一轮检查一个当前方格节点</span></span><br><span class="line">    <span class="keyword">while</span> (openList.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 在OpenList中查找 F值最小的节点作为当前方格节点</span></span><br><span class="line">        Node current = findMinNode();</span><br><span class="line">        <span class="comment">// 当前方格节点从open list中移除</span></span><br><span class="line">        openList.remove(current);</span><br><span class="line">        <span class="comment">// 当前方格节点进入 close list</span></span><br><span class="line">        closeList.add(current);</span><br><span class="line">        <span class="comment">// 找到所有邻近节点</span></span><br><span class="line">        List&lt;Node&gt; neighbors = findNeighbors(current);</span><br><span class="line">        <span class="keyword">for</span> (Node node : neighbors) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!openList.contains(node)) &#123;</span><br><span class="line">                <span class="comment">//邻近节点不在OpenList中，标记父亲、G、H、F，并放入OpenList</span></span><br><span class="line">                markAndInvolve(current, end, node);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//如果终点在OpenList中，直接返回终点格子</span></span><br><span class="line">        <span class="keyword">if</span> (find(openList, end) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> find(openList, end);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//OpenList用尽，仍然找不到终点，说明终点不可到达，返回空</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-      
-      
-      <categories>
-          
-          <category> Algorithm </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> A-star </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>A*Search</title>
       <link href="/2020/04/17/Algorithm/A-Search/"/>
       <url>/2020/04/17/Algorithm/A-Search/</url>
       
-        <content type="html"><![CDATA[<h2 id="A-搜索算法（A-star-Search）"><a href="#A-搜索算法（A-star-Search）" class="headerlink" title="A*搜索算法（A-star Search）"></a>A*搜索算法（A-star Search）</h2><h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>A<em>搜索算法是一种在图形平面上，有多个节点的路径，求出最低通过成本的算法，一种用于寻找有效路径的算法。常用于游戏中NPC的移动计算，或网络游戏的BOT的移动计算上。这种以估值来决定搜索优先级的方式，也成为<em>*启发式搜索</em></em>。</p><p>该算法综合最良优先搜索和<a href="https://zh.wikipedia.org/wiki/Dijkstra算法" target="_blank" rel="noopener">Dijkstra算法</a>的优点：在进行启发式搜索提高算法效率的同时，可以保证找到一条最优路径（基于评估函数）。</p><p>A*搜索算法的演示图：</p><p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\Astar_progress_animation.gif" alt="Astar_progress_animation"></p><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>以一个简单的寻路场景为例</p><p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\640.png" alt="640" style="zoom: 67%;"></p><p>游戏场景是7x5大小的迷宫，由小方格组成，绿格是起点，红格是终点，中间三个蓝色格子代表墙。</p><p>游戏规则是从起点开始，每一步只能向上下左右移动一格，且不能穿越墙壁。如何用最少的步数到达终点？</p><hr><p>引入两个集合和一个公式：<br>$$<br>[OpenList], [CloseList], F = G + H<br>$$<br>OpenList和CloseList都是存储格子的集合，其中OpenList存储可到达的格子，CloseList存储已到达的格子。</p><p>公式 F = G + H 是对格子价值的评估。其中<strong>G</strong>代表从起点到当前格的成本，也就是走了多少步。<strong>H</strong>代表从当前格走到目标格的距离，也就是不考虑障碍的情况下，离目标还有多远。<strong>F</strong>则是对G和H的综合评估。显然我们应尽量选择步数少，离目标更近的格子。所以<strong>F</strong>的值越小越好。</p><hr><h4 id="一次局部搜索"><a href="#一次局部搜索" class="headerlink" title="一次局部搜索"></a>一次局部搜索</h4><ol><li>将起点Node(1, 2)放入OpenList</li><li>找出OpenList中F值最小的方格，即唯一方格Node(1, 2)作为当前方格，并把当前格移出OpenList，放入CloseList。代表这个格子已经到达并检查过了。</li><li>找出当前格上下左右所有可到达的格子，看它们是否在OpenList当中。如果不在，加入OpenList，计算出相应的G、H、F值，并把当前格子作为它们的“父节点”。</li></ol><p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\A-star-round1.png" alt="A-star-round1" style="zoom: 67%;"></p><p><strong>图中，每个格子的左下方数字是G，右下方是H，左上方是F。</strong></p><h4 id="多次局部搜索"><a href="#多次局部搜索" class="headerlink" title="多次局部搜索"></a>多次局部搜索</h4><p>继续重复局部搜索的步骤，直到找到终点为止。</p><ol><li><p>找出OpenList中F值最小的方格点，即Node(2, 2)作为当前方格，并把当前格移出OpenList，放入CloseList。代表这个格子已经到达并检查过了。</p></li><li><p>找出当前格上下左右所有可到达的格子，看它们是否在OpenList当中。如果不在，加入OpenList，计算出相应的G、H、F值，并把当前格子作为它们的“父节点”。</p><p>……</p><p>当终点方格出现在OpenList中，寻路结束。</p><p>终点方格–&gt;父节点–&gt;父父节点–&gt;…–&gt;起点，如此回溯便能得到一条路径。（格上数字表示F）    </p><p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\A-star-end.png" alt="A-star-end" style="zoom:67%;"></p></li></ol><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>伪代码</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Node <span class="title">aStarSearch</span><span class="params">(Node start, Node end)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 把起点加入 open list  </span></span><br><span class="line">    openList.add(start);</span><br><span class="line">    <span class="comment">//主循环，每一轮检查一个当前方格节点</span></span><br><span class="line">    <span class="keyword">while</span> (openList.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 在OpenList中查找 F值最小的节点作为当前方格节点</span></span><br><span class="line">        Node current = findMinNode();</span><br><span class="line">        <span class="comment">// 当前方格节点从open list中移除</span></span><br><span class="line">        openList.remove(current);</span><br><span class="line">        <span class="comment">// 当前方格节点进入 close list</span></span><br><span class="line">        closeList.add(current);</span><br><span class="line">        <span class="comment">// 找到所有邻近节点</span></span><br><span class="line">        List&lt;Node&gt; neighbors = findNeighbors(current);</span><br><span class="line">        <span class="keyword">for</span> (Node node : neighbors) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!openList.contains(node)) &#123;</span><br><span class="line">                <span class="comment">//邻近节点不在OpenList中，标记父亲、G、H、F，并放入OpenList</span></span><br><span class="line">                markAndInvolve(current, end, node);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//如果终点在OpenList中，直接返回终点格子</span></span><br><span class="line">        <span class="keyword">if</span> (find(openList, end) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> find(openList, end);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//OpenList用尽，仍然找不到终点，说明终点不可到达，返回空</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+        <content type="html"><![CDATA[<h2 id="A-搜索算法（A-star-Search）"><a href="#A-搜索算法（A-star-Search）" class="headerlink" title="A*搜索算法（A-star Search）"></a>A*搜索算法（A-star Search）</h2><h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>A<em>搜索算法是一种在图形平面上，有多个节点的路径，求出最低通过成本的算法，一种用于寻找有效路径的算法。常用于游戏中NPC的移动计算，或网络游戏的BOT的移动计算上。这种以估值来决定搜索优先级的方式，也成为<em>*启发式搜索</em></em>。</p><p>该算法综合最良优先搜索和<a href="https://zh.wikipedia.org/wiki/Dijkstra算法" target="_blank" rel="noopener">Dijkstra算法</a>的优点：在进行启发式搜索提高算法效率的同时，可以保证找到一条最优路径（基于评估函数）。</p><p>A*搜索算法的演示图：</p><p><img src="https://evilkx.github.io/images/typora_srcs/SearchAlgorithm/Astar_progress_animation.gif" alt="Astar_progress_animation"></p><h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>以一个简单的寻路场景为例</p><p><img src="https://evilkx.github.io/images/typora_srcs/SearchAlgorithm/640.png" alt="640" style="zoom: 67%;"></p><p>游戏场景是7x5大小的迷宫，由小方格组成，绿格是起点，红格是终点，中间三个蓝色格子代表墙。</p><p>游戏规则是从起点开始，每一步只能向上下左右移动一格，且不能穿越墙壁。如何用最少的步数到达终点？</p><hr><p>引入两个集合和一个公式：<br>$$<br>[OpenList], [CloseList], F = G + H<br>$$<br>OpenList和CloseList都是存储格子的集合，其中OpenList存储可到达的格子，CloseList存储已到达的格子。</p><p>公式 F = G + H 是对格子价值的评估。其中<strong>G</strong>代表从起点到当前格的成本，也就是走了多少步。<strong>H</strong>代表从当前格走到目标格的距离，也就是不考虑障碍的情况下，离目标还有多远。<strong>F</strong>则是对G和H的综合评估。显然我们应尽量选择步数少，离目标更近的格子。所以<strong>F</strong>的值越小越好。</p><hr><h4 id="一次局部搜索"><a href="#一次局部搜索" class="headerlink" title="一次局部搜索"></a>一次局部搜索</h4><ol><li>将起点Node(1, 2)放入OpenList</li><li>找出OpenList中F值最小的方格，即唯一方格Node(1, 2)作为当前方格，并把当前格移出OpenList，放入CloseList。代表这个格子已经到达并检查过了。</li><li>找出当前格上下左右所有可到达的格子，看它们是否在OpenList当中。如果不在，加入OpenList，计算出相应的G、H、F值，并把当前格子作为它们的“父节点”。</li></ol><p><img src="https://evilkx.github.io/images/typora_srcs/SearchAlgorithm/A-star-round1.png" alt="A-star-round1" style="zoom: 67%;"></p><p><strong>图中，每个格子的左下方数字是G，右下方是H，左上方是F。</strong></p><h4 id="多次局部搜索"><a href="#多次局部搜索" class="headerlink" title="多次局部搜索"></a>多次局部搜索</h4><p>继续重复局部搜索的步骤，直到找到终点为止。</p><ol><li><p>找出OpenList中F值最小的方格点，即Node(2, 2)作为当前方格，并把当前格移出OpenList，放入CloseList。代表这个格子已经到达并检查过了。</p></li><li><p>找出当前格上下左右所有可到达的格子，看它们是否在OpenList当中。如果不在，加入OpenList，计算出相应的G、H、F值，并把当前格子作为它们的“父节点”。</p><p>……</p><p>当终点方格出现在OpenList中，寻路结束。</p><p>终点方格–&gt;父节点–&gt;父父节点–&gt;…–&gt;起点，如此回溯便能得到一条路径。（格上数字表示F）    </p><p><img src="https://evilkx.github.io/images/typora_srcs/SearchAlgorithm/A-star-end.png" alt="A-star-end" style="zoom:67%;"></p></li></ol><h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>伪代码</p><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> Node <span class="title">aStarSearch</span><span class="params">(Node start, Node end)</span> </span>&#123;</span><br><span class="line">    <span class="comment">// 把起点加入 open list  </span></span><br><span class="line">    openList.add(start);</span><br><span class="line">    <span class="comment">//主循环，每一轮检查一个当前方格节点</span></span><br><span class="line">    <span class="keyword">while</span> (openList.size() &gt; <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="comment">// 在OpenList中查找 F值最小的节点作为当前方格节点</span></span><br><span class="line">        Node current = findMinNode();</span><br><span class="line">        <span class="comment">// 当前方格节点从open list中移除</span></span><br><span class="line">        openList.remove(current);</span><br><span class="line">        <span class="comment">// 当前方格节点进入 close list</span></span><br><span class="line">        closeList.add(current);</span><br><span class="line">        <span class="comment">// 找到所有邻近节点</span></span><br><span class="line">        List&lt;Node&gt; neighbors = findNeighbors(current);</span><br><span class="line">        <span class="keyword">for</span> (Node node : neighbors) &#123;</span><br><span class="line">            <span class="keyword">if</span> (!openList.contains(node)) &#123;</span><br><span class="line">                <span class="comment">//邻近节点不在OpenList中，标记父亲、G、H、F，并放入OpenList</span></span><br><span class="line">                markAndInvolve(current, end, node);</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//如果终点在OpenList中，直接返回终点格子</span></span><br><span class="line">        <span class="keyword">if</span> (find(openList, end) != <span class="keyword">null</span>) &#123;</span><br><span class="line">            <span class="keyword">return</span> find(openList, end);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//OpenList用尽，仍然找不到终点，说明终点不可到达，返回空</span></span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
       
       
       <categories>
@@ -205,6 +180,56 @@
     
     <entry>
       <title>test</title>
+      <link href="/2020/04/17/OpenCV/test/"/>
+      <url>/2020/04/17/OpenCV/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> OpenCV </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> OpenCV </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/C/test/"/>
+      <url>/2020/04/17/C/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> C </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> C </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
       <link href="/2020/04/17/Python/test/"/>
       <url>/2020/04/17/Python/test/</url>
       
@@ -221,81 +246,6 @@
         <tags>
             
             <tag> Python </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/K210/test/"/>
-      <url>/2020/04/17/K210/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> K210 </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> K210 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/Git/test/"/>
-      <url>/2020/04/17/Git/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> Git </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> Git </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>test</title>
-      <link href="/2020/04/17/CyberSecurity/test/"/>
-      <url>/2020/04/17/CyberSecurity/test/</url>
-      
-        <content type="html"><![CDATA[]]></content>
-      
-      
-      <categories>
-          
-          <category> CyberSecurity </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> CyberSecurity </tag>
             
         </tags>
       
@@ -330,22 +280,22 @@
     
     <entry>
       <title>test</title>
-      <link href="/2020/04/17/RaspberryPi/test/"/>
-      <url>/2020/04/17/RaspberryPi/test/</url>
+      <link href="/2020/04/17/K210/test/"/>
+      <url>/2020/04/17/K210/test/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
       <categories>
           
-          <category> RaspberryPi </category>
+          <category> K210 </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> RaspberryPi </tag>
+            <tag> K210 </tag>
             
         </tags>
       
@@ -405,22 +355,22 @@
     
     <entry>
       <title>test</title>
-      <link href="/2020/04/17/C/test/"/>
-      <url>/2020/04/17/C/test/</url>
+      <link href="/2020/04/17/RaspberryPi/test/"/>
+      <url>/2020/04/17/RaspberryPi/test/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
       <categories>
           
-          <category> C </category>
+          <category> RaspberryPi </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> C </tag>
+            <tag> RaspberryPi </tag>
             
         </tags>
       
@@ -455,22 +405,22 @@
     
     <entry>
       <title>test</title>
-      <link href="/2020/04/17/OpenCV/test/"/>
-      <url>/2020/04/17/OpenCV/test/</url>
+      <link href="/2020/04/17/CyberSecurity/test/"/>
+      <url>/2020/04/17/CyberSecurity/test/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
       <categories>
           
-          <category> OpenCV </category>
+          <category> CyberSecurity </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> OpenCV </tag>
+            <tag> CyberSecurity </tag>
             
         </tags>
       
@@ -480,22 +430,22 @@
     
     <entry>
       <title>test</title>
-      <link href="/2020/04/17/CVM/test/"/>
-      <url>/2020/04/17/CVM/test/</url>
+      <link href="/2020/04/17/Git/test/"/>
+      <url>/2020/04/17/Git/test/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
       <categories>
           
-          <category> CVM </category>
+          <category> Git </category>
           
       </categories>
       
       
         <tags>
             
-            <tag> CVM </tag>
+            <tag> Git </tag>
             
         </tags>
       
@@ -521,6 +471,31 @@
         <tags>
             
             <tag> OperatingSystem </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>test</title>
+      <link href="/2020/04/17/CVM/test/"/>
+      <url>/2020/04/17/CVM/test/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      <categories>
+          
+          <category> CVM </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> CVM </tag>
             
         </tags>
       

@@ -61,9 +61,9 @@
 	  <h2 id="A-搜索算法（A-star-Search）"><a href="#A-搜索算法（A-star-Search）" class="headerlink" title="A*搜索算法（A-star Search）"></a>A*搜索算法（A-star Search）</h2><h3 id="基本思想"><a href="#基本思想" class="headerlink" title="基本思想"></a>基本思想</h3><p>A<em>搜索算法是一种在图形平面上，有多个节点的路径，求出最低通过成本的算法，一种用于寻找有效路径的算法。常用于游戏中NPC的移动计算，或网络游戏的BOT的移动计算上。这种以估值来决定搜索优先级的方式，也成为<em>*启发式搜索</em></em>。</p>
 <p>该算法综合最良优先搜索和<a href="https://zh.wikipedia.org/wiki/Dijkstra算法" target="_blank" rel="noopener">Dijkstra算法</a>的优点：在进行启发式搜索提高算法效率的同时，可以保证找到一条最优路径（基于评估函数）。</p>
 <p>A*搜索算法的演示图：</p>
-<p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\Astar_progress_animation.gif" alt="Astar_progress_animation"></p>
+<p><img src="https://evilkx.github.io/images/typora_srcs/SearchAlgorithm/Astar_progress_animation.gif" alt="Astar_progress_animation"></p>
 <h3 id="流程"><a href="#流程" class="headerlink" title="流程"></a>流程</h3><p>以一个简单的寻路场景为例</p>
-<p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\640.png" alt="640" style="zoom: 67%;"></p>
+<p><img src="https://evilkx.github.io/images/typora_srcs/SearchAlgorithm/640.png" alt="640" style="zoom: 67%;"></p>
 <p>游戏场景是7x5大小的迷宫，由小方格组成，绿格是起点，红格是终点，中间三个蓝色格子代表墙。</p>
 <p>游戏规则是从起点开始，每一步只能向上下左右移动一格，且不能穿越墙壁。如何用最少的步数到达终点？</p>
 <hr>
@@ -75,7 +75,7 @@
 <li>找出OpenList中F值最小的方格，即唯一方格Node(1, 2)作为当前方格，并把当前格移出OpenList，放入CloseList。代表这个格子已经到达并检查过了。</li>
 <li>找出当前格上下左右所有可到达的格子，看它们是否在OpenList当中。如果不在，加入OpenList，计算出相应的G、H、F值，并把当前格子作为它们的“父节点”。</li>
 </ol>
-<p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\A-star-round1.png" alt="A-star-round1" style="zoom: 67%;"></p>
+<p><img src="https://evilkx.github.io/images/typora_srcs/SearchAlgorithm/A-star-round1.png" alt="A-star-round1" style="zoom: 67%;"></p>
 <p><strong>图中，每个格子的左下方数字是G，右下方是H，左上方是F。</strong></p>
 <h4 id="多次局部搜索"><a href="#多次局部搜索" class="headerlink" title="多次局部搜索"></a>多次局部搜索</h4><p>继续重复局部搜索的步骤，直到找到终点为止。</p>
 <ol>
@@ -85,7 +85,7 @@
 <p>……</p>
 <p>当终点方格出现在OpenList中，寻路结束。</p>
 <p>终点方格–&gt;父节点–&gt;父父节点–&gt;…–&gt;起点，如此回溯便能得到一条路径。（格上数字表示F）    </p>
-<p><img src="D:\test\source\images\typora_srcs\SearchAlgorithm\A-star-end.png" alt="A-star-end" style="zoom:67%;"></p>
+<p><img src="https://evilkx.github.io/images/typora_srcs/SearchAlgorithm/A-star-end.png" alt="A-star-end" style="zoom:67%;"></p>
 </li>
 </ol>
 <h3 id="实现"><a href="#实现" class="headerlink" title="实现"></a>实现</h3><p>伪代码</p>
@@ -112,10 +112,6 @@
 	
 		
 			
-		
-	
-		
-			
 			
 		
 	
@@ -213,7 +209,7 @@
 	
 	
 	
-		<li class="prev"><a href="/2020/04/17/A-Search/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
+		<li class="prev"><a href="/2020/04/18/遗传算法/" class="alignleft prev"><i class="fa fa-arrow-circle-o-left"></i>prev</a></li>
 	
 	<li><a href="/"><i class="fa fa-archive"></i>Home</a></li>
 	
